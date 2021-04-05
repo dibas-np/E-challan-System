@@ -9,6 +9,7 @@ header{
 body{
    
 }
+/*Top logo section css*/
 .top-logo-section{
     width: auto;
     height: 90px;
@@ -72,6 +73,7 @@ body{
     cursor: pointer;
     font-size: 24px;
 }
+/*Navigation bar Menu Secition*/
 .nav-menu-section{
     width: auto;
     height: 75px;
@@ -95,7 +97,7 @@ ul li a{
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
-
+/*Main Section*/
 .main-section .main-section-bg{
     width:100%;
     height: auto;
