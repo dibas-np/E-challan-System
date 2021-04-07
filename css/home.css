@@ -13,7 +13,7 @@ body {
   width: auto;
   height: 90px;
   background-color: #000535;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-sizing: border-box;
 }
 .top-logo-section img {
@@ -61,6 +61,10 @@ body {
   cursor: pointer;
   color: #fff;
 }
+.userButtonNav:hover{
+  transition: 0.5s linear;
+  border: 1px solid white;
+}
 .search-container .searchButton {
   width: 40px;
   height: 50px;
@@ -72,15 +76,42 @@ body {
   cursor: pointer;
   font-size: 24px;
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px 15px;
+  z-index: 1;
+}
+
+.user-home:hover .dropdown-content {
+  display: block;
+
+}
+.dropdown-content a{
+  color:black;
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+  
+}
+.dropdown-content a:hover{
+  color: red;
+  text-shadow: 1px #000535;
+}
+
 /*Navigation bar Menu Secition*/
 .nav-menu-section {
   width: auto;
   height: 63px;
   background-color: white;
 }
-ul {
-  justify-content: center;
+ul { 
   display: flex;
+  justify-content: center;
+  position: relative;
+  right: -110px;
 }
 ul li {
   display: inline-block;
@@ -94,7 +125,6 @@ ul li a {
   transition: 0.5s ease-in;
   font-size: 25px;
   font-family: "Roboto", sans-serif;
-  position: relative;
 }
 /*Main Section*/
 .main-section .main-section-bg {
@@ -154,5 +184,6 @@ ul li a {
 }
 .main-section-button button:hover {
   background-color: white;
+  transition: 2s;
   color: #000535;
 }
