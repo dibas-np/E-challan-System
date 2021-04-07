@@ -75,7 +75,7 @@ body {
 /*Navigation bar Menu Secition*/
 .nav-menu-section {
   width: auto;
-  height: 75px;
+  height: 63px;
   background-color: white;
 }
 ul {
@@ -92,7 +92,7 @@ ul li a {
   margin-top: 4px;
   padding: 20px 20px 0 0;
   transition: 0.5s ease-in;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Roboto", sans-serif;
   position: relative;
 }
