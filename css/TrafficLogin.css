@@ -20,14 +20,14 @@
   text-align: center;
   color: #030730;
   margin-bottom: 40px;
-  font-size: 62px;
+  font-size: 42px;
 }
 
 .main-login label{
   padding: 50px;
   line-height: 50px;
   color: #030730;
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .main-login input{
@@ -42,15 +42,14 @@
 .main-login button{
   background-color: #DC143C;
   color: white;
-  padding: 14px 20px;
-  margin-left: 278px;
+  padding: 10px 20px;
+  margin-left: 240px;
   margin-top: 40px;
-  justify-content: right;
   border: none;
   width: 50%;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 28px;
 }
 .main-login button:hover{
   background-color: #75031a;
@@ -60,14 +59,14 @@
 }
 .main-register p{
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   color: #FFFFFF;
   padding-top: 100px;
 }
 .main-register button{
   background-color: #DC143C;
   color: white;
-  padding: 14px 20px;
+  padding: 10px 20px;
   margin-left: 90px;
   margin-top: 40px;
   justify-content: right;
@@ -75,7 +74,7 @@
   width: 50%;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 28px;
 }
 .main-register button:hover{
   background-color: #75031a;
