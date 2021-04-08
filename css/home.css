@@ -306,7 +306,7 @@ ul li a {
 .footer-container{
   background-color: #030730;
   height: 500px;
-  padding:50px 100px;
+  padding:50px 100px 20px 100px;
 }
 .footer-heading{
   color: #dc143c;
@@ -348,5 +348,9 @@ ul li a {
 }
 .row-copyright{
   text-align: center;
-  padding-top:50px;
+  height: 100px;
+  background-color: #00031e;
+}
+.row-copyright p{
+  padding-top: 40px;
 }
