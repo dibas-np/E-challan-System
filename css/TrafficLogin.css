@@ -1,81 +1,91 @@
+/* Start of code */
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
+  margin: 0; /* set initial magrin 0 */
+  padding: 0; /* set initial padding 0 */
+  font-family: "Roboto", sans-serif; /* Set same font 'Roboto' for all text elements*/
 }
 
 .section-login{
-  background-color: #030730;
-  display: flex;
-  padding: 100px 0;
+  background-color: #030730; /* use of color code in background color */
+  display: flex; /* Display is set to flex */
+  padding: 100px 0; /* padding spacing */
 }
 
 .main-login{
-  flex: 2;
+  flex: 2; /* set flex size 2 */
   background-color: #F5F5F5;
-  border-radius: 0 100px 100px 0;
-  padding: 50px;
+  border-radius: 0 100px 100px 0; /* Give border radius on top and bottom right */
+  padding: 50px; /* give padding to all sides */
 }
+
 .main-login h1{
-  text-align: center;
+  text-align: center; /* align text to center */
   color: #030730;
-  margin-bottom: 40px;
-  font-size: 42px;
+  margin-bottom: 40px; /* set margin at bottom only */
+  font-size: 42px; /* font size to heading */
 }
 
 .main-login label{
-  padding: 50px;
-  line-height: 50px;
-  color: #030730;
-  font-size: 28px;
+  padding: 50px; /* give padding to all sides */
+  line-height: 50px; /* set height of text line */
+  color: #030730; /* font color #030730*/
+  font-size: 28px;  /* set font size of label text */
 }
 
 .main-login input{
-  width: 50%;
   padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  border-radius: 10px;
+  margin: 8px 0; /* give margin to top and bottom only */
+  display: inline-block; /* display as inline block */
+  border: 1px solid #ccc; /* set border for input text fields */
+  width: 400px; /* width of login buton */
+  border-radius: 10px; /*border radius on all corners */
 }
+
 .main-login button{
   background-color: #DC143C;
-  color: white;
+  color: white; /* set font color */
   padding: 10px 20px;
-  margin-left: 240px;
-  margin-top: 40px;
+  margin-top: 20px;
   border: none;
-  width: 50%;
   border-radius: 10px;
   cursor: pointer;
   font-size: 28px;
+  width: 100%; /* set full width */
 }
+
 .main-login button:hover{
-  background-color: #75031a;
+  background-color: #75031a; /* Change color on button hover */
 }
+
 .main-register{
   flex: 1;
 }
+
 .main-register p{
   text-align: center;
   font-size: 28px;
   color: #FFFFFF;
   padding-top: 100px;
 }
+
 .main-register button{
   background-color: #DC143C;
-  color: white;
+  color: white; /* button color */
   padding: 10px 20px;
-  margin-left: 90px;
-  margin-top: 40px;
-  justify-content: right;
-  border: none;
-  width: 50%;
+  margin-left: 137px; /* set margin at left only */
+  margin-top: 40px; /* set margin at top only */
+  border: none; /* remove default button border and set to none */
   border-radius: 10px;
-  cursor: pointer;
-  font-size: 28px;
+  cursor: pointer;/* cursor as link pointer */
+  font-size: 28px; /* font size of button */
 }
-.main-register button:hover{
+
+.main-register button:hover{ /* Change color on button hover */
   background-color: #75031a;
 }
+
+.form-login{
+  display: flex; /* keep items in flex layout */
+  justify-content: space-around; /* give space to each item */
+}
+/* End of code */

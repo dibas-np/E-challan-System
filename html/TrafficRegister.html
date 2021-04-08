@@ -78,35 +78,43 @@
       </div>
     </header>
 
+    
+    <!-- Start of Traffic Registration Section -->
     <section class="section-register">
-        <div class="main-login">
+        <!--  -->
+        <div class="main-login"> 
             <p>Already <br> have <br> an account?</p>
-            <button type="menu">Login</button>
+            <button type="submit">Login</button>
         </div>
         <div class="main-register">
             <h1>Traffic Registration</h1>
             <form class="form-login" action="GET">
-                <div class="labels">
+                <div class="labels"> <!-- To keep Label Name -->
+                  <!-- <br> tag is used as single line break  -->
                     <label for="name"><b>Name</b></label> <br>
                     <label for="phone"><b>Phone</b></label> <br>               
                     <label for="address"><b>Address</b></label> <br>                
                     <label for="email"><b>Email</b></label> <br>       
-                    <label for="psw"><b>Password</b></label> <br>              
-                    <label for="psw"><b>Confirm</b></label>  <br>      
+                    <label for="pass"><b>Password</b></label> <br>              
+                    <label for="pass"><b>Confirm</b></label>  <br>      
                 </div>
-                <div class="input-field">
+                <div class="input-field"><!-- To keep text fields -->
+                  <!-- placeholder is used to write text information in input textfields 
+                       all text fields options are set to required for successful Login -->
                     <input type="text" placeholder="Enter Name" name="name" required> <br>
                     <input type="text" placeholder="Enter Pnone" name="phone" required> <br>
                     <input type="text" placeholder="Enter Address" name="address" required> <br>
                     <input type="email" placeholder="Enter Email" name="email" required> <br>
-                    <input type="password" placeholder="Enter Password" name="psw" required><br>
-                    <input type="password" placeholder="Re-enter Password" name="psw" required><br>
+                    <input type="password" placeholder="Enter Password" name="pass" required><br>
+                    <input type="password" placeholder="Re-enter Password" name="pass" required><br>
                     <button type="submit">Register</button>
                 </div>
                 
             </form>
         </div>
     </section>
+     <!-- End of Traffic Login Section -->
+
 
     <footer>
       <div class="footer-container">
