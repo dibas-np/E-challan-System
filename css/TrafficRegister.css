@@ -1,69 +1,72 @@
-* {
+/* Start of code */
+*{ /* CSS applied to all as * */
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif; /* Set same font for all text elements*/
   }
   
+  /* CSS to provide background color and padding spacing
+    Display is set to flex for arranging two sections in row */
   .section-register{
     background-color: #030730;
     display: flex;
     padding: 100px 0;
   }
   
-  .main-register{
-    flex: 3;
-    background-color: #F5F5F5;
-    border-radius: 100px 0 0 100px;
+  .main-register{ 
+    flex: 3; /* Sets flex size as 3 */
+    background-color: #F5F5F5; /* Set background color */
+    border-radius: 100px 0 0 100px; /* Give border radius on top and bottom left*/
     padding: 50px;
   }
+
   .main-register h1{
-    text-align: center;
+    text-align: center; /* Bring text content to center*/
     color: #030730;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Set margin at bottom only*/
     font-size: 42px;
   }
   
   .main-register label{
-    padding-right: 20px;
-    line-height: 57px;
+    padding-right: 20px; /* Set padding at right only*/
+    line-height: 57px; /* Make line height more taller*/
     color: #030730;
     font-size: 24px;
   }
   
   .main-register input{
-    /* width: 50%; */
-    padding: 12px 20px;
-    width: 400px;
+    padding: 12px 20px; 
+    width: 400px; /* Set width of an element */
     margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 10px;
+    border: 1px solid #ccc; /* Set border */
+    border-radius: 10px; /* Set border radius to 10px*/
   }
+
   .main-login p{
-    padding-top: 200px;
+    padding-top: 200px; /* Set padding at top only*/
     text-align: center;
     font-size: 24px;
     color: #FFFFFF;
   }
+
   .main-login button{
-    background-color: #DC143C;
-    color: white;
-    padding: 10px 20px;
-    margin-left: 62px;
-    /* margin-left: 100px; */
-    margin-top: 40px;
-    border: none;
-    /* width: 50%; */
+    background-color: #DC143C; /* Set background color of button*/
+    color: white; /* Set font color as white*/
+    padding: 10px 20px; /* pading 10px for top, bottom and 20px for left and right */
+    margin-left: 100px; /* Set margin at left only*/
+    margin-top: 40px; /* Set margin at top only*/
+    border: none; /* removes default button border */
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer; /* Set cursor as pointer*/
     font-size: 28px;
   }
-  .main-login button:hover{
-    background-color: #75031a;
+
+  .main-login button:hover{ 
+    background-color: #75031a; /* Change color on button hover */
   }
+
   .main-login{
-    flex: 1;
+    flex: 1; /* flex is set to 1 */
   }
 
 
@@ -71,22 +74,18 @@
     background-color: #DC143C;
     color: white;
     padding: 10px 0;
-    border: none;
-    width: 400px;
+    border: none; /* remove default button border and set to none */
+    width: 100%; /* set full width */
     border-radius: 10px;
     cursor: pointer;
-    font-size: 28px;
+    font-size: 28px; /* font size of button */
+    margin-top: 20px; /* Set margin at top only*/
   }
   .main-register button:hover{
-    background-color: #75031a;
+    background-color: #75031a; /* Change color on button hover */
   }
   .form-login{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Give space around elements*/
   }
-  /* .labels{
-    flex: 1;
-  }
-  .input-fields{
-    flex: 2;
-  } */
+  /* End of code */
