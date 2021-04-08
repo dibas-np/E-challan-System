@@ -303,5 +303,50 @@ ul li a {
   font-weight: 540;
 }
 
+.footer-container{
+  background-color: #030730;
+  height: 500px;
+  padding:50px 100px;
+}
+.footer-heading{
+  color: #dc143c;
+  text-align: center;
+  font-size: 45px;
+  padding-top: 40px;
+}
+.footer-container h1,.footer-container h2,.row-copyright{
+  color: #fff;
+}
+.row-social-icons{
+  padding-right: 200px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.row-social-icons ul li a{
+  color:#fff;
+}
+.footer-menu{
+  float: left;
+  width: 33.33%;
 
-
+}
+/* Clear floats after the columns */
+.footer-menu-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer-menu h1{
+  font-size: 30px;
+  line-height: 34px;
+  padding-bottom: 20px;
+}
+.footer-menu h2{
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.row-copyright{
+  text-align: center;
+  padding-top:50px;
+}
