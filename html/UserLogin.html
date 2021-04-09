@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login and Register Page</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="from-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                   <button type="button" class="toggle-btn" onclick="signin()">Sign In</button>
+                   <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <form id="signin" class="input-group">
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <input type="text" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                    <button type="reset" class="submit-btn">Reset</button>
+                </form>
+                <form id="register" class="input-group">
+                    <input type="text" class="input-field" placeholder="Name" required>
+                    <input type="tel" class="input-field" placeholder="Phone Number" required>
+                    <input type="text" class="input-field" placeholder="User Name" required>
+                    <input type="text" class="input-field" placeholder="Password" required>
+                    <input type="text" class="input-field" placeholder="Address" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and condition</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                    <button type="reset" class="submit-btn">Reset</button>
+                    <button type="cancel" class="submit-btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            var x = document.getElementById("signin");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+
+            function signin(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+
+        </script>
+
+
+
+    </body>
+</html>
