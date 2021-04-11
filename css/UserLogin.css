@@ -4,16 +4,324 @@
     font-family: sans-serif;
 }
 
-.hero{
-    height: 100%;
+header {
+    list-style-type: none;
+    position: sticky;
+  }
+  
+  /*Top logo section css*/
+  .top-logo-section {
+    width: auto;
+    height: 90px;
+    background-color: #000535;
+    box-sizing: border-box;
+  }
+  .top-logo-section img {
+    margin-left: 20px;
+  }
+  .search-container {
+    float: right;
+    position: relative;
+    top: -72px;
+    left: -100px;
+  }
+  .user-home {
+    float: right;
+    position: relative;
+    top: -72px;
+    right: -270px;
+  }
+  .search-container .search {
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../img/2.jpg');
-    background-position: center;
-    background-size: cover;
+    position: relative;
+    display: flex;
+  }
+  .search-container .searchTerm {
+    width: 100%;
+    border: 3px solid #fff;
+    border-right: none;
+    padding: 4px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9dbfaf;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  .search-container .searchTerm:focus {
+    color: #000535;
+  }
+  .user-home .userButtonNav {
+    width: 40px;
+    height: 50px;
+    border: 1px solid #000535;
+    background: transparent;
+    text-align: center;
+    color: #000535;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: #fff;
+  }
+  .userButtonNav:hover {
+    transition: 0.5s linear;
+    border: 1px solid white;
+  }
+  .search-container .searchButton {
+    width: 40px;
+    height: 50px;
+    border: 1px solid #fff;
+    background: #fff;
+    text-align: center;
+    color: #000535;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  .dropdown-content {
+    display: none;
     position: absolute;
-}
+    background-color: #f9f9f9;
+    width: 27px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    z-index: 1;
+    padding-right: 30px;
+  }
+  .user-home:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+  }
+  .dropdown-content a:hover {
+    color: red;
+    text-shadow: 1px #000535;
+  }
 
-.from-box{
+
+  /*Navigation bar Menu Secition*/
+.nav-menu-section {
+    width: auto;
+    height: 63px;
+    background-color: white;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: -110px;
+  }
+  ul li {
+    display: inline-block;
+    margin: 15px;
+  }
+  ul li a {
+    text-decoration: none;
+    color: #000535;
+    margin-top: 4px;
+    padding: 20px 20px 0 0;
+    transition: 0.5s ease-in;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+  }
+  /*End of Navigation bar Menu section*/
+  
+  /*Main Section*/
+  .main-section .main-section-bg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .main-section-container {
+    width: 100%;
+    height: 350px;
+    background-color: #000535;
+    opacity: 0.8;
+    margin-top: 200px;
+    position: absolute;
+  }
+  .main-section-text,
+  .main-section-img,
+  .main-section-button,
+  .main-section-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .main-section-img img {
+    opacity: 1;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin-top: 400px;
+    left: -620px;
+  }
+  .main-section-text {
+    font-size: 64px;
+    color: white;
+    opacity: 1;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 150px;
+  }
+  .main-section-button {
+    margin-top: 292px;
+    width: 400px;
+  }
+  .main-section-button button {
+    width: 250px;
+    height: 70px;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+    background-color: #dc143c;
+    color: white;
+    border: none;
+  }
+  .main-section-button button:hover {
+    background-color: white;
+    transition: 2s;
+    color: #000535;
+  }
+  
+  .main-description {
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 100px;
+  }
+  
+  .main-description h1,
+  .main-description h2 {
+    font-size: 48px;
+  }
+  .main-description p1,
+  p2,
+  p3,
+  p4,
+  p5 {
+    font-size: 32px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 50px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  /*End of Main Section*/
+  
+  /*Trending box*/
+  .trending-box-background {
+    width: 100%;
+    height: 150px;
+    background-color: #dc143c;
+    margin-bottom: 50px;
+  }
+  .trending-box-background h1 {
+    font-weight: 700;
+    font-size: 64px;
+    color: #fff;
+    text-align: center;
+    padding: 45px 0;
+  }
+  /*End of trending box*/
+  
+  /*News Section*/
+  .news-section-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 10px;
+    padding-right: 46px;
+    box-sizing: border-box;
+  }
+  .news-section-row .col-1 {
+    width: 40%;
+    padding: 10px 10px;
+    float: left;
+    box-sizing: border-box;
+  }
+  .news-section-row .col-2 {
+    width: 40%;
+    padding: 10px 10px;
+    float: left;
+    box-sizing: border-box;
+  }
+  .news-section-row img {
+    width: 100%;
+    overflow: hidden;
+    border-collapse: separate;
+  }
+  .col-1 {
+    width: 670px;
+    height: auto;
+  }
+  .news-section-image {
+    float: left;
+    font-size: 0;
+  }
+  .col-2 img {
+    width: 419px;
+    height: 470px;
+  }
+  .news-section-image img {
+    width: 670px;
+    height: 180px;
+  }
+  .news-section-box1,
+  .news-section-box2,
+  .news-section-box3 {
+    height: 70px;
+    background-color: black;
+    opacity: 0.5;
+    position: relative;
+    top: -74px;
+  }
+  .news-section-box3 {
+    top: 110px;
+  }
+  .news-section-box2 {
+    top: 231px;
+  }
+  .news-caption h2,
+  .news-section p {
+    position: relative;
+    top: -130px;
+    right: -20px;
+    color: white;
+    font-weight: 540;
+  }
+  .news-section p {
+    padding-bottom: 3px;
+  }
+  .news-caption2 p,
+  .news-caption2 h2 {
+    position: relative;
+    top: -246px;
+    right: -20px;
+    color: white;
+    font-weight: 540;
+  }
+  .news-caption3 p,
+  .news-caption3 h2 {
+    position: relative;
+    top: -105px;
+    right: -20px;
+    color: white;
+    font-weight: 540;
+  }
+  /*End of News Section*/
+
+
+
+  .from-box{
     width: 380px;
     height: 480px;
     position: relative;
@@ -46,13 +354,13 @@
     position: absolute;
     width: 110px;
     height: 100%;
-    background: linear-gradient(to right, #ff105f,#ffad06);
+    background: linear-gradient(to right, #003893,#dc143c);
     border-radius: 30px;
     transition: .5s;
 }
 
 .input-group{
-    top: 180px;
+    top: 120px;
     position: absolute;
     width: 280px;
     transition: .5s;
@@ -76,7 +384,8 @@
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, #ff105f,#ffad06);
+    background: linear-gradient(to right, #003893,#dc143c);
+    color: white;
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -100,3 +409,59 @@ span{
 #register{
     left: 450px;
 }
+
+/*Footer*/
+.footer-container {
+    background-color: #030730;
+    height: 500px;
+    padding: 50px 100px 20px 100px;
+  }
+  .footer-heading {
+    color: #dc143c;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 40px;
+  }
+  .footer-container h1,
+  .footer-container h2,
+  .row-copyright {
+    color: #fff;
+  }
+  .row-social-icons {
+    padding-right: 200px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .row-social-icons ul li a {
+    color: #fff;
+  }
+  .footer-menu {
+    float: left;
+    width: 33.33%;
+  }
+  /* Clear floats after the columns */
+  .footer-menu-container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .footer-menu h1 {
+    font-size: 30px;
+    line-height: 34px;
+    padding-bottom: 20px;
+  }
+  .footer-menu h2 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  .row-copyright {
+    text-align: center;
+    height: 100px;
+    background-color: #00031e;
+  }
+  .row-copyright p {
+    padding-top: 40px;
+  }
+  /*End of Footer*/
+  
