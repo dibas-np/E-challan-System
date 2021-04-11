@@ -87,7 +87,7 @@
 
 /* to remove default underline in hyperlink*/
 .main-register a{ 
-  text-decoration: none; 
+  text-decoration: none;  /*remove any default decoration and set to none */
 }
 
 .form-login{

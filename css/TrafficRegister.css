@@ -68,11 +68,11 @@
 
   /* to remove default underline in hyperlink*/
   .main-login a{
-    text-decoration: none;
+    text-decoration: none; /*remove any default decoration*/
   }
 
   .main-login{
-    flex: 1; /* flex is set to 1 */
+    flex: 1; /* flex size is set to 1 */
   }
 
   .main-register button{
