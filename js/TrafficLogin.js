@@ -1,9 +1,9 @@
-// Start of Code for Traffic Login Page
+// Start of Code 
 function TrafficLogin() {
 	var username = document.getElementById('user').value
 	var password = document.getElementById('pass').value
 
-		// check is user input matches username and password
+		// to check is user input matches username and password
 		if(username == "traffic" && password == "pass") {
 			console.log("Login Success")
 			// redirects to Challan Page if true
@@ -18,13 +18,13 @@ function TrafficLogin() {
             title: 'Login Error',
             text: 'Make sure all fields are not empty!'
           })
-	}else{
+	}else{ //if username and password are incorrect
 		swal.fire({
             icon: 'error',
             title: 'Error...',
             text: 'The Username or Password is incorrect! \Please try again with proper information'
           })
-		console.log("Incorrect username or password")
+		console.log("Incorrect username or password") //message in console
 	}
 }
 // End of code
