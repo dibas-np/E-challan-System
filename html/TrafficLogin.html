@@ -8,14 +8,9 @@
     <link rel="stylesheet" type="text/css" href="../css/TrafficLogin.css">
     <link rel="icon" href="../images/header_icon.png" type="ico" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="../css/home.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/9d93f40cf0.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/9d93f40cf0.js" crossorigin="anonymous" ></script>
   </head>
 
   <body>
@@ -82,7 +77,7 @@
     <section class="section-login">
         <div class="main-login">
             <h1>Traffic Login</h1>
-            <form class="form-login" action="GET">
+            <form class="form-login">
               <div>   <!-- To keep Label Name -->
                 <!-- <br> is used as single line break  -->
                 <label for="username"><b>Username</b></label> <br>
@@ -91,22 +86,23 @@
               <div>  <!-- To keep text fields -->
                  <!-- placeholder is used to write text information in input textfields 
                       all text fields options are set to required for successful Login -->
-                <input type="text" placeholder="Enter Username" name="username" required> <br>  
-                <input type="password" placeholder="Enter Password" name="pass" required><br>                   
-                <button type="submit">Login</button>  <!-- Set button type as submit -->
+                <input id="user" type="text" placeholder="Enter Username" name="user" required> <br>  
+                <input id="pass" type="password" placeholder="Enter Password" name="pass" required><br>                   
+                <a onclick="TrafficLogin()" href="#"><button type="submit">Login</button></a>  <!-- Set button type as submit -->
               </div>
             </form>
         </div>
         <div class="main-register">
           <!-- <br> is used as single line break  -->
             <p>Is this <br> your <br> first time?</p> <!-- p tag is for writing paragraph/text -->
-            <button type="submit">Register</button>
+            <a href="TrafficRegister.html"><button>Register</button></a>
         </div>
     </section>
      <!-- End of Traffic Login Section -->
 
 
-    <footer>
+     <!--Footer Section-->
+     <footer>
       <div class="footer-container">
         <h5 class="footer-heading">
           Get to Know Us More
@@ -139,35 +135,39 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="footer-menu-container">
+          <div class="footer-menu">
+            <h1>Traffic Police</h1>
+            <h2>Contact Us</h2>
+            <h2>About Us</h2>
+            <h2>News</h2>
+            <h2>Privacy Policy</h2>
+          </div>
+          <div class="footer-menu">
+            <h1>Information and Services</h1>
+            <h2>Advice and Information</h2>
+            <h2>Crime Prevention</h2>
+            <h2>Challan</h2>
+            <h2>Payment</h2>
+          </div>
+          <div class="footer-menu">
+            <h1>Partners</h1>
+           <h2>Police Mero Sathi</h2>
+            <h2>Nepal Government</h2>
+            <h2>Herald College Kathmandu</h2>
+            <h2>Nepal Transport Office</h2>
+          </div>
+        </div>
       </div>
-      <div class="footer-menu-container">
-        <div class="footer-menu">
-          <h1>Traffic Police</h1>
-              <h2>Contact Us</h2>
-              <h2>About Us</h2>
-              <h2>News</h2>
-              <h2>Privacy Policy</h2>
-        </div>
-        <div class="footer-menu">
-          <h1>Information and Services</h1>
-              <h2>Advice and Information</h2>
-              <h2>Crime Prevention</h2>
-              <h2>Challan</h2>
-              <h2>Payment</h2>
-        </div>
-        <div class="footer-menu">
-          <h1>Partners</h1>
-          <h2><Police Mero Sathi</h2>
-              <h2>Nepal Government</h2>
-              <h2>Herald College Kathmandu</h2>
-              <h2>Nepal Transport Office</h2>
-        </div>
-        </div>
-        <div class="row-copyright ">
-          <p>Copyright © 2021 E-Challan System - All right reserved</p>
-        </div>
+      <div class="row-copyright ">
+        <p>Copyright © 2021 E-Challan System - All right reserved</p>
       </div>
     </footer>
-   
+    <!--End of Footer Section-->
+    <!-- JavaScript for Login -->
+    <script src="../js/TrafficLogin.js"></script>
   </body>
 </html>
+<!-- end of code -->
