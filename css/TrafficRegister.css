@@ -53,12 +53,13 @@
     background-color: #DC143C; /* Set background color of button*/
     color: white; /* Set font color as white*/
     padding: 10px 20px; /* pading 10px for top, bottom and 20px for left and right */
-    margin-left: 100px; /* Set margin at left only*/
-    margin-top: 40px; /* Set margin at top only*/
+    margin: auto;
+    margin-top: 20px; /* Set margin at top only*/
     border: none; /* removes default button border */
     border-radius: 10px;
     cursor: pointer; /* Set cursor as pointer*/
     font-size: 28px;
+    display: flex; /* to make button center */
   }
 
   .main-login button:hover{ 
