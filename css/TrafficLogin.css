@@ -80,8 +80,14 @@
   display: flex; /* to make button center */
 }
 
+
 .main-register button:hover{ /* Change color on button hover */
   background-color: #75031a;
+}
+
+/* to remove default underline in hyperlink*/
+.main-register a{ 
+  text-decoration: none; 
 }
 
 .form-login{

@@ -66,10 +66,14 @@
     background-color: #75031a; /* Change color on button hover */
   }
 
+  /* to remove default underline in hyperlink*/
+  .main-login a{
+    text-decoration: none;
+  }
+
   .main-login{
     flex: 1; /* flex is set to 1 */
   }
-
 
   .main-register button{
     background-color: #DC143C;
