@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
 header {
   list-style-type: none;
   position: sticky;
@@ -16,26 +17,31 @@ header {
   box-sizing: border-box;
   overflow: visible;
 }
+
 .top-logo-section img {
   margin-left: 20px;
 }
+
 .search-container {
   float: right;
   position: relative;
   top: -72px;
   left: -100px;
 }
+
 .user-home {
   float: right;
   position: relative;
   top: -72px;
   right: -270px;
 }
+
 .search-container .search {
   width: 100%;
   position: relative;
   display: flex;
 }
+
 .search-container .searchTerm {
   width: 100%;
   border: 3px solid #fff;
@@ -47,9 +53,11 @@ header {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
 }
+
 .search-container .searchTerm:focus {
   color: #000535;
 }
+
 .user-home .userButtonNav {
   width: 40px;
   height: 50px;
@@ -61,10 +69,12 @@ header {
   cursor: pointer;
   color: #fff;
 }
+
 .userButtonNav:hover {
   transition: 0.5s linear;
   border: 1px solid white;
 }
+
 .search-container .searchButton {
   width: 40px;
   height: 50px;
@@ -76,6 +86,7 @@ header {
   cursor: pointer;
   font-size: 24px;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -86,18 +97,22 @@ header {
   z-index: 1;
   padding-right: 30px;
 }
+
 .user-home:hover .dropdown-content {
   display: block;
 }
+
 .dropdown-content a {
   color: black;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
 }
+
 .dropdown-content a:hover {
   color: red;
   text-shadow: 1px #000535;
 }
+
 /*End of Top logo section*/
 
 /*Navigation bar Menu Secition*/
@@ -106,16 +121,19 @@ header {
   height: 63px;
   background-color: white;
 }
+
 ul {
   display: flex;
   justify-content: center;
   position: relative;
   right: -110px;
 }
+
 ul li {
   display: inline-block;
   margin: 15px;
 }
+
 ul li a {
   text-decoration: none;
   color: #000535;
@@ -126,8 +144,9 @@ ul li a {
   font-family: "Roboto", sans-serif;
   position: relative;
 }
+
 ul li a:after {
-	content: '';
+  content: '';
   position: absolute;
   left: 0;
   display: inline-block;
@@ -136,16 +155,18 @@ ul li a:after {
   border-bottom: 1px solid;
   margin-top: 10px;
   opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
 }
+
 ul li a:hover:after {
   opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
+
 /*End of Navigation bar Menu section*/
 
 /*Main Section*/
@@ -154,6 +175,7 @@ ul li a:hover:after {
   height: auto;
   object-fit: cover;
 }
+
 .main-section-container {
   width: 100%;
   height: 350px;
@@ -162,6 +184,7 @@ ul li a:hover:after {
   margin-top: -600px;
   position: absolute;
 }
+
 .main-section-text,
 .main-section-img,
 .main-section-button {
@@ -179,6 +202,7 @@ ul li a:hover:after {
   margin-top: -600px;
   left: -620px;
 }
+
 .main-section-text {
   font-size: 64px;
   color: white;
@@ -189,9 +213,11 @@ ul li a:hover:after {
   font-weight: 700;
   margin-top: -480px;
 }
+
 .main-section-button {
   width: 400px;
 }
+
 .main-section-button button {
   width: 250px;
   height: 70px;
@@ -202,6 +228,7 @@ ul li a:hover:after {
   color: white;
   border: none;
 }
+
 .main-section-button button:hover {
   background-color: white;
   transition: 2s;
@@ -220,6 +247,7 @@ ul li a:hover:after {
 .main-description h2 {
   font-size: 48px;
 }
+
 .main-description p1,
 p2,
 p3,
@@ -233,6 +261,7 @@ p5 {
   text-align: justify;
   text-justify: inter-word;
 }
+
 /*End of Main Section*/
 
 /*Trending box*/
@@ -242,6 +271,7 @@ p5 {
   background-color: #dc143c;
   margin-bottom: 50px;
 }
+
 .trending-box-background h1 {
   font-weight: 700;
   font-size: 64px;
@@ -249,6 +279,7 @@ p5 {
   text-align: center;
   padding: 45px 0;
 }
+
 /*End of trending box*/
 
 /*News Section*/
@@ -261,39 +292,47 @@ p5 {
   padding-right: 46px;
   box-sizing: border-box;
 }
+
 .news-section-row .col-1 {
   width: 40%;
   padding: 10px 10px;
   float: left;
   box-sizing: border-box;
 }
+
 .news-section-row .col-2 {
   width: 40%;
   padding: 10px 10px;
   float: left;
   box-sizing: border-box;
 }
+
 .news-section-row img {
   width: 100%;
   overflow: hidden;
   border-collapse: separate;
 }
+
 .col-1 {
   width: 670px;
   height: auto;
 }
+
 .news-section-image {
   float: left;
   font-size: 0;
 }
+
 .col-2 img {
   width: 419px;
   height: 470px;
 }
+
 .news-section-image img {
   width: 670px;
   height: 180px;
 }
+
 .news-section-box1,
 .news-section-box2,
 .news-section-box3 {
@@ -303,12 +342,15 @@ p5 {
   position: relative;
   top: -74px;
 }
+
 .news-section-box3 {
   top: 110px;
 }
+
 .news-section-box2 {
   top: 231px;
 }
+
 .news-caption h2,
 .news-section p {
   position: relative;
@@ -317,9 +359,11 @@ p5 {
   color: white;
   font-weight: 540;
 }
+
 .news-section p {
   padding-bottom: 3px;
 }
+
 .news-caption2 p,
 .news-caption2 h2 {
   position: relative;
@@ -328,6 +372,7 @@ p5 {
   color: white;
   font-weight: 540;
 }
+
 .news-caption3 p,
 .news-caption3 h2 {
   position: relative;
@@ -336,6 +381,7 @@ p5 {
   color: white;
   font-weight: 540;
 }
+
 /*End of News Section*/
 
 /*Footer*/
@@ -344,51 +390,62 @@ p5 {
   height: 500px;
   padding: 50px 100px 20px 100px;
 }
+
 .footer-heading {
   color: #dc143c;
   text-align: center;
   font-size: 45px;
   padding-top: 40px;
 }
+
 .footer-container h1,
 .footer-container h2,
 .row-copyright {
   color: #fff;
 }
+
 .row-social-icons {
   padding-right: 200px;
   margin-top: 30px;
   margin-bottom: 40px;
 }
+
 .row-social-icons ul li a {
   color: #fff;
 }
+
 .footer-menu {
   float: left;
   width: 33.33%;
 }
+
 /* Clear floats after the columns */
 .footer-menu-container:after {
   content: "";
   display: table;
   clear: both;
 }
+
 .footer-menu h1 {
   font-size: 30px;
   line-height: 34px;
   padding-bottom: 20px;
 }
+
 .footer-menu h2 {
   font-size: 25px;
   font-weight: 500;
   line-height: 40px;
 }
+
 .row-copyright {
   text-align: center;
   height: 100px;
   background-color: #00031e;
 }
+
 .row-copyright p {
   padding-top: 40px;
 }
+
 /*End of Footer*/
