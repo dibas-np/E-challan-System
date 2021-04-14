@@ -94,4 +94,23 @@
   display: flex; /* keep items in flex layout */
   justify-content: space-around; /* give space to each item */
 }
+
+/* Making Responsive Page */
+@media screen and (max-width: 1000px){ 
+  .main-login input{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px){ 
+  .section-login{
+    flex-direction: column-reverse;
+  }
+  .main-register{
+    padding: auto;
+  }
+  .main-login{
+    padding: auto;
+    border-radius: 0;
+  }
+}
 /* End of code */

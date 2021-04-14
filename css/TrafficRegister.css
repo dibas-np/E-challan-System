@@ -93,4 +93,22 @@
     display: flex;
     justify-content: space-around; /* Give space around elements*/
   }
+
+  /* Making Responsive Page */
+@media screen and (max-width: 1000px){ 
+  .main-register input{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px){ 
+  .section-register{
+    flex-direction: column;
+  }
+  .main-register{
+    border-radius: 0;
+  }
+  .main-login{
+    padding: 20px;
+  }
+}
   /* End of code */
