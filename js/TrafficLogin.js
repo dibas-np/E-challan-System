@@ -1,8 +1,8 @@
 // Start of Code 
-function TrafficLogin() {
+// Function TrafficLogin is made to call it when Login button is pressed
+function TrafficLogin() { 
 	var username = document.getElementById('user').value
 	var password = document.getElementById('pass').value
-
 		// to check is user input matches username and password
 		if(username == "traffic" && password == "pass") {
 			console.log("Login Success")
@@ -10,7 +10,6 @@ function TrafficLogin() {
             window.location.href = "../html/TrafficChallan.html"
 			return
 		}
-    
     //checks if username or password is empty and display appropriate message
     if(username.trim() ==="" || password.trim() ===""){
 		swal.fire({
@@ -24,7 +23,7 @@ function TrafficLogin() {
             title: 'Error...',
             text: 'The Username or Password is incorrect! \Please try again with proper information'
           })
-		console.log("Incorrect username or password") //message in console
+		console.log("Incorrect username or password") //message in console 
 	}
 }
 // End of code

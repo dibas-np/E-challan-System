@@ -58,11 +58,11 @@
 }
 
 .main-register{
-  flex: 1;
+  flex: 1; /* set flex size to 1*/
 }
 
 .main-register p{
-  text-align: center;
+  text-align: center; /* make text appear in center alignment */
   font-size: 28px;
   color: #FFFFFF;
   padding-top: 100px;
@@ -80,7 +80,6 @@
   display: flex; /* to make button center */
 }
 
-
 .main-register button:hover{ /* Change color on button hover */
   background-color: #75031a;
 }
@@ -95,22 +94,23 @@
   justify-content: space-around; /* give space to each item */
 }
 
-/* Making Responsive Page */
-@media screen and (max-width: 1000px){ 
+/* Making Responsive Login Page*/
+@media screen and (max-width: 1000px){  /*  Applied When screen size is smaller than 1000px */
   .main-login input{
     width: 100%;
   }
 }
-@media screen and (max-width: 700px){ 
+
+@media screen and (max-width: 700px){ /*  Applied When screen size is smaller than 700px */
   .section-login{
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /* to keep register details at top */
   }
   .main-register{
     padding: auto;
   }
   .main-login{
     padding: auto;
-    border-radius: 0;
+    border-radius: 0; /* back to default border radius*/
   }
 }
 /* End of code */

@@ -1,5 +1,5 @@
 /* Start of code */
-*{ /* CSS applied to all as * */
+*{ /* Initial CSS applied to all elements in page */
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif; /* Set same font for all text elements*/
@@ -86,29 +86,32 @@
     font-size: 28px; /* font size of button */
     margin-top: 20px; /* Set margin at top only*/
   }
+
   .main-register button:hover{
     background-color: #75031a; /* Change color on button hover */
   }
+
   .form-login{
     display: flex;
-    justify-content: space-around; /* Give space around elements*/
+    justify-content: space-around; /* Give space around each elements*/
   }
 
-  /* Making Responsive Page */
-@media screen and (max-width: 1000px){ 
+/* Making Responsive Register Page */
+@media screen and (max-width: 1000px){  /*  Applied When screen size is smaller than 1000px */
   .main-register input{
     width: 100%;
   }
 }
-@media screen and (max-width: 700px){ 
+
+@media screen and (max-width: 700px){ /*  Applied When screen size is smaller than 700px */
   .section-register{
-    flex-direction: column;
+    flex-direction: column; /* to keep elements as column alignment */
   }
   .main-register{
-    border-radius: 0;
+    border-radius: 0; /* back to default border radius*/
   }
   .main-login{
-    padding: 20px;
+    padding: 20px; /* padding of 20px to all sides */
   }
 }
   /* End of code */
