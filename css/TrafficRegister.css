@@ -70,7 +70,6 @@
   .main-login a{
     text-decoration: none; /*remove any default decoration*/
   }
-
   .main-login{
     flex: 1; /* flex size is set to 1 */
   }
