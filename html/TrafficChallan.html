@@ -89,7 +89,7 @@
             </div>
             <div>
                 <label>License Number</label>
-                <input id="licenseno" type="number" placeholder="Enter License Number">
+                <input id="licenseno" type="number" placeholder="Enter License Number" required>
             </div>
             <div>
                 <label>Vehicle Category</label>
@@ -102,7 +102,7 @@
             </div>
             <div>
                 <label>Vehicle Number</label>
-                <input id="vehicleno" type="text" placeholder="Enter vehicle number">
+                <input id="vehicleno" type="text" placeholder="Enter vehicle number" required>
             </div>
             <div>
                 <label>Created By</label > 
@@ -110,16 +110,16 @@
             </div>
               <div>
                   <label> Challan Date</label>
-                  <input id="date" type="date">
+                  <input id="date" type="date" required>
               </div>
               
             <div>
               <label>Guilty For</label>
-              <input id="problem" type="text" placeholder="Enter challan reason">
+              <input id="problem" type="text" placeholder="Enter challan reason" required>
           </div>
           <div>
               <label>Fine Amount</label>
-              <input id="amount" type="text" placeholder="Enter fine amount">
+              <input id="amount" type="text" placeholder="Enter fine amount" required>
           </div>
           <div>
                   <button id="submitChallan" type="submit" >Create Challan</button>
@@ -206,7 +206,8 @@
     </footer>
     <!--End of Footer Section-->
     <!-- JavaScript for Login -->
-    <script src="../js/TrafficLogin.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../js/TrafficChallan.js"></script>
   </body>
 </html>
 <!-- end of code -->
