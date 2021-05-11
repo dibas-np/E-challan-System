@@ -81,7 +81,7 @@
               <p>Please fill the challan detail of user properly.</p>
               <div>
                 <label>Full Name</label>
-                <input class="full-name" type="text" placeholder="Enter Full Name" required>
+                <input id="fullName" type="text" placeholder="Enter Full Name" required>
             </div>
             <div>
                 <label>Address</label>
@@ -89,7 +89,7 @@
             </div>
             <div>
                 <label>License Number</label>
-                <input id="licenseno" type="number" placeholder="Enter License Number" required>
+                <input id="licenseno" type="text" placeholder="Enter License Number" required>
             </div>
             <div>
                 <label>Vehicle Category</label>
@@ -121,21 +121,12 @@
               <label>Fine Amount</label>
               <input id="amount" type="text" placeholder="Enter fine amount" required>
           </div>
-          <div>
-                  <button id="submitChallan" type="submit" >Create Challan</button>
-                  <button id="printChallan" onclick="myPrint('myfrm')" >Print Challan</button>
-          </div>
+        </div>
+        <div class="buttonss">
+          <button id="submitChallan" type="submit" >Create</button>
+          <button id="printChallan" onclick="myPrint('challan')" >Print</button>
         </div>
       </form>
-      <script>
-        function myPrint(challan) {
-            var printdata = document.getElementById(challan);
-            newwin = window.open("");
-            newwin.document.write(printdata.outerHTML);
-            newwin.print();
-            newwin.close();
-        }
-    </script>
    </section>
     <!-- End of Traffic Challan Section -->
 
@@ -208,6 +199,7 @@
     <!-- JavaScript for Login -->
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="../js/TrafficChallan.js"></script>
+        <script src="../js/script.js"></script>
   </body>
 </html>
 <!-- end of code -->

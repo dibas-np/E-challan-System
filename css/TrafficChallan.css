@@ -43,12 +43,15 @@
     width: 100%;
 }
 
+.buttonss{
+    display: flex;
+    justify-content: center;
+}
 .main-form button {
     padding: 10px 20px;
     font-size: 20px;
     border-radius: 10px;
-    display: block;
-    width: 100%;
+    width: 50%;
     margin-top: 20px;
     font-weight: 555;
     border: none;
@@ -84,7 +87,5 @@
     
     .main-form button {
         font-size: 18px;
-        display: block;
-        width: 80%;
     }
 }
