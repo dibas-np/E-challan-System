@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Traffic Login</title>
+    <title>Traffic Challan</title>
     <link rel="stylesheet" type="text/css" href="../css/TrafficChallan.css">
     <link rel="icon" href="../images/header_icon.png" type="ico" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="../css/home.css" />
@@ -72,14 +72,71 @@
         </nav>
       </div>
     </header>
-
+<!-- create: name,place,license number,vehicle number, vehicle type, created by,created date,problem,fine -->
     <!-- Start of Traffic Challan Section -->
-    <section class="section-challan" style="background-color: rgb(185, 0, 56); height: 400px; ">
-       <h1 style="color: rgb(240, 240, 240); text-align: center;font-size: 56px;padding-top: 50px;">
-        This Page will be completed in Sprint 2</h1>  <!-- Message in h1 tag  -->
-       <h2 style="color: rgb(130, 130, 136);text-align:center;font-size: 42px;padding: 20px;">
-        Thank you -RABINS RAI</h2>  <!--  Message in h2 tag  -->
-    </section>
+    <section class="main-form">
+      <form  id="challan" class="challan-form" method="POST">
+          <div class="challan-detail">
+              <h2>Challan Details</h2>
+              <p>Please fill the challan detail of user properly.</p>
+              <div>
+                <label>Full Name</label>
+                <input class="full-name" type="text" placeholder="Enter Full Name" required>
+            </div>
+            <div>
+                <label>Address</label>
+                <input id="address" type="text" placeholder="Enter Address" required>
+            </div>
+            <div>
+                <label>License Number</label>
+                <input id="licenseno" type="number" placeholder="Enter License Number">
+            </div>
+            <div>
+                <label>Vehicle Category</label>
+                <select id="vehicle" name="vehicle">
+                    <option value="A">Type A</option>
+                    <option value="B">Type B</option>
+                    <option value="C">Type C</option>
+                    <option value="D">Type D</option>
+                </select>
+            </div>
+            <div>
+                <label>Vehicle Number</label>
+                <input id="vehicleno" type="text" placeholder="Enter vehicle number">
+            </div>
+            <div>
+                <label>Created By</label > 
+                <input id="creater" type="text"  placeholder="Challan creater name" required>
+            </div>
+              <div>
+                  <label> Challan Date</label>
+                  <input id="date" type="date">
+              </div>
+              
+            <div>
+              <label>Guilty For</label>
+              <input id="problem" type="text" placeholder="Enter challan reason">
+          </div>
+          <div>
+              <label>Fine Amount</label>
+              <input id="amount" type="text" placeholder="Enter fine amount">
+          </div>
+          <div>
+                  <button id="submitChallan" type="submit" >Create Challan</button>
+                  <button id="printChallan" onclick="myPrint('myfrm')" >Print Challan</button>
+          </div>
+        </div>
+      </form>
+      <script>
+        function myPrint(challan) {
+            var printdata = document.getElementById(challan);
+            newwin = window.open("");
+            newwin.document.write(printdata.outerHTML);
+            newwin.print();
+            newwin.close();
+        }
+    </script>
+   </section>
     <!-- End of Traffic Challan Section -->
 
 <!--  -->

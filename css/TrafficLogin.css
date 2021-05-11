@@ -37,7 +37,7 @@
   margin: 8px 0; /* give margin to top and bottom only */
   display: inline-block; /* display as inline block */
   border: 1px solid #ccc; /* set border for input text fields */
-  width: 400px; /* width of login buton */
+  width: 100%; /* width of login buton */
   border-radius: 10px; /*border radius on all corners */
 }
 

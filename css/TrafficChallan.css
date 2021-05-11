@@ -1,0 +1,89 @@
+/* Start of code */
+* {
+    margin: 0; /* set initial magrin 0 */
+    padding: 0; /* set initial padding 0 */
+    font-family: "Roboto", sans-serif; /* Set same font 'Roboto' for all text elements*/
+  }
+.main-form{
+    display: flex;
+    justify-content: center;
+    background-color: #030730;
+    padding: 100px 20px;
+}
+.challan-detail div{
+    display: block;
+}
+
+.challan-detail h2{
+    font-size: 46px;
+    padding-top: 50px;
+    color: #DC143C;
+}
+
+.challan-detail p{
+    font-size: 18px;
+    color: #fafbff;
+    font-weight: 300;
+    padding: 20px 0;
+    opacity: 80%;
+}
+
+.challan-detail label{
+    font-size: 24px;
+    padding-top: 20px;  
+    color: #fafbff; /* font color #030730*/
+    display: block;
+}
+
+.challan-detail input, .challan-detail select {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.main-form button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 555;
+    border: none;
+    margin-right: 20px;
+}
+
+#submitChallan{
+    background-color: #DC143C;
+}
+.main-form button:hover{
+    background-color: #c5c5c5;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .challan-detail h2{
+        font-size: 36px;
+        color: #DC143C;
+    }
+    
+    .challan-detail p{
+        font-size: 16px;
+    }
+    
+    .challan-detail label{
+        font-size: 20px;
+    }
+    
+    .challan-detail input, .challan-detail select {
+        font-size: 16px;
+        width: 80%;
+    }
+    
+    .main-form button {
+        font-size: 18px;
+        display: block;
+        width: 80%;
+    }
+}
