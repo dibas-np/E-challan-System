@@ -27,7 +27,7 @@
           <div class="search-container">
             <div class="search">
               <input type="text" class="searchTerm" placeholder="What are you looking for?" />
-              <button type="submit" class="searchButton">
+              <button type="button" class="searchButton">
                 <i class="fa fa-search"></i>
               </button>
             </div>
@@ -128,23 +128,23 @@
  </section> -->
   <!-- End of Traffic Challan Section -->
   
-  <table class="table-section">
+  <table>
     <tr>
       <td class="main-form">
-        <form id="challan" class="challan-form" method="POST">
+        <form id="challan" class="challan-form" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" method="POST">
           <div class="challan-detail">
             <h2>Challan Details</h2>
             <div>
               <label>Full Name</label>
-              <input id="fullName" type="text" placeholder="Enter Full Name" required>
+              <input class="input-admin" id="fullName" type="text" placeholder="Enter Full Name" required>
             </div>
             <div>
               <label>Address</label>
-              <input id="address" type="text" placeholder="Enter Address" required>
+              <input class="input-admin" id="address" type="text" placeholder="Enter Address" required>
             </div>
             <div>
               <label>License Number</label>
-              <input id="licenseno" type="text" placeholder="Enter License Number" required>
+              <input class="input-admin" id="licenseno" type="text" placeholder="Enter License Number" required>
             </div>
             <div>
               <label>Vehicle Category</label>
@@ -157,11 +157,11 @@
             </div>
             <div>
               <label>Vehicle Number</label>
-              <input id="vehicleno" type="text" placeholder="Enter vehicle number" required>
+              <input class="input-admin" id="vehicleno" type="text" placeholder="Enter vehicle number" required>
             </div>
             <div>
               <label>Created By</label>
-              <input id="creater" type="text" placeholder="Challan creater name" required>
+              <input class="input-admin" id="creater" type="text" placeholder="Challan creater name" required>
             </div>
             <div>
               <label> Challan Date</label>
@@ -170,26 +170,27 @@
   
             <div>
               <label>Guilty For</label>
-              <input id="problem" type="text" placeholder="Enter challan reason" required>
+              <input class="input-admin" id="problem" type="text" placeholder="Enter challan reason" required>
             </div>
             <div>
               <label>Fine Amount</label>
-              <input id="amount" type="text" placeholder="Enter fine amount" required>
+              <input class="input-admin" id="amount" type="text" placeholder="Enter fine amount" required>
             </div>
           </div>
           <div class="buttonss">
-            <button id="submitChallan" type="submit">Submit</button>
+            <button class="input-admin" id="submitChallan" type="submit">Submit</button>
           </div>
         </form>
       </td>
-      <td>
-        <table class="list" id="employeeList">
+      <td class="details-table">
+        <table class="list" id="challanList">
           <thead>
             <tr>
               <th>Created Date</th>
               <th>Name</th>
               <th>License No.</th>
               <th>Created By</th>
+              <th>Category</th>
               <th>Address</th>
               <th>Vehicle No.</th>
               <th>Reason</th>
@@ -204,7 +205,6 @@
       </td>
     </tr>
   </table>
-
 
   <!--Footer Section-->
   <footer>
@@ -271,6 +271,8 @@
     </div>
   </footer>
   <!--End of Footer Section-->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/AdminPage.js"></script>
 </body>
 
 </html>

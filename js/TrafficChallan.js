@@ -41,7 +41,6 @@ class TrafficChallanDetails{ //Class TrafficChallanDetails
             console.log(errorStore);
           });
       }
-    
     }
     
     //challan form 
