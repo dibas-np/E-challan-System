@@ -23,6 +23,18 @@
       "guilty": "Over Speed",
       "fineAmount": "500",
       "id": 2
+    },
+    {
+      "fullName": "Test",
+      "address": "KTM",
+      "licenceNo": "123",
+      "vehicleCat": "A",
+      "vehicleNum": "BA 1 G 123",
+      "createdBy": "KP Baa",
+      "challanDate": "2021-04-29",
+      "guilty": "Over Speed",
+      "fineAmount": "500",
+      "id": 3
     }
   ]
 }
