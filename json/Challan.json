@@ -35,6 +35,18 @@
       "guilty": "Over Speed",
       "fineAmount": "500",
       "id": 3
+    },
+    {
+      "fullName": "123",
+      "address": "123",
+      "licenceNo": "123",
+      "vehicleCat": "A",
+      "vehicleNum": "123",
+      "createdBy": "123",
+      "challanDate": "2021-05-01",
+      "guilty": "123",
+      "fineAmount": "123",
+      "id": 4
     }
   ]
 }

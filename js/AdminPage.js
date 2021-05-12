@@ -2,40 +2,47 @@
 /**
  * reading data from json server and calling insertNewRecord() function to display it
  */
-axios.get('http://localhost:3000/ChallanDetails')
-.then(response => response.data)
-.then(data=>{
-  let content = '';
-  data.forEach(item => {
-    var formData = {};
-    formData["fullName"] = item.fullName;
-    formData["address"] = item.address;
-    formData["licenseno"] = item.licenceNo;
-    formData["vehicle"] = item.vehicleCat;
-    formData["vehicleno"] = item.vehicleNum;
-    formData["creater"] = item.createdBy;
-    formData["date"] = item.challanDate;
-    formData["problem"] = item.guilty;
-    formData["amount"] = item.fineAmount;
-    insertNewRecord(formData);
-  })
-})
+function displayData() {
+    axios.get('http://localhost:3000/ChallanDetails')
+        .then(response => response.data)
+        .then(data => {
+            data.forEach(item => {
+                var formData = {};
+                formData["fullName"] = item.fullName;
+                formData["address"] = item.address;
+                formData["licenseno"] = item.licenceNo;
+                formData["vehicle"] = item.vehicleCat;
+                formData["vehicleno"] = item.vehicleNum;
+                formData["creater"] = item.createdBy;
+                formData["date"] = item.challanDate;
+                formData["problem"] = item.guilty;
+                formData["amount"] = item.fineAmount;
+                insertNewRecord(formData);
+            })
+        })
+}
+displayData();
 
-
-var selectedRow = null
+var selectedRow = null;
 let form = document.querySelector('.main-form');
 
 function onFormSubmit() {
     if (form!=null) {
         var formData = readFormData();
-        if (selectedRow == null)
-            insertNewRecord(formData);
+        if (selectedRow == null){
+             insertNewRecord(formData);
+             addDataToJson(formData);
+        }  
         else
             updateRecord(formData);
         resetForm();
     }
 }
 
+/**
+ * reading the data from form
+ * @returns formData
+ */
 function readFormData() {
     var formData = {};
     formData["fullName"] = document.getElementById("fullName").value;
@@ -50,6 +57,10 @@ function readFormData() {
     return formData;
 }
 
+/**
+ * inserting data to the table 
+ * @param {} data 
+ */
 function insertNewRecord(data) {
     var table = document.getElementById("challanList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
@@ -74,6 +85,34 @@ function insertNewRecord(data) {
     cell10 = newRow.insertCell(9);
     cell10.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
+}
+//Method to format data to add to json
+function formatChallanData(data) {
+    let challanData = {
+        fullName: data.fullName,
+        address: data.address,
+        licenceNo: data.licenseno,
+        vehicleCat: data.vehicle,
+        vehicleNum: data.vehicleno,
+        createdBy: data.creater,
+        challanDate: data.date,
+        guilty: data.problem,
+        fineAmount: data.amount
+    };
+
+    //returns all values as dataTrafficChallan
+    return challanData;
+}
+
+function addDataToJson(challan) {
+    const data = formatChallanData(challan);
+    //Use of axios.post
+    axios.post('http://localhost:3000/ChallanDetails', data) //using 3000 as default port
+        .then(() => {
+            console.log("New Challan Recorded."); //Display output in console if submission is successful
+        }).catch((errorStore) => { //to Catch errors, if error occurs
+            console.log(errorStore);
+        });
 }
 
 function resetForm() {
@@ -102,6 +141,7 @@ function onEdit(td) {
     document.getElementById("problem").value =  selectedRow.cells[7].innerHTML;
     document.getElementById("amount").value =  selectedRow.cells[8].innerHTML;
 }
+
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.date;
     selectedRow.cells[1].innerHTML = formData.fullName;
@@ -112,6 +152,28 @@ function updateRecord(formData) {
     selectedRow.cells[6].innerHTML = formData.vehicleno;
     selectedRow.cells[7].innerHTML = formData.problem;
     selectedRow.cells[8].innerHTML = formData.amount;
+
+
+    axios.get('http://localhost:3000/ChallanDetails')
+        .then(response => response.data)
+        .then(data => {
+            data.forEach(item => {
+                if (item.id == selectedRow) {
+                    item.fullName = formData.fullName;
+                    item.address = formData.address;
+                    item.licenceNo = formData.licenseno;
+                    item.vehicleCat = formData.vehicle;
+                    item.vehicleNum = formData.vehicleno;
+                    item.createdBy = formData.creater;
+                    item.challanDate = formData.date;
+                    item.guilty = formData.problem;
+                    item.fineAmount = formData.amount;
+                    return;
+                }
+            })
+        })
+
+
 }
 
 function onDelete(td) {
