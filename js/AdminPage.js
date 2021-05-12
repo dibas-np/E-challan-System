@@ -1,3 +1,5 @@
+var selectedRow = null;
+let form = document.querySelector('.main-form');
 
 /**
  * reading data from json server and calling insertNewRecord() function to display it
@@ -23,20 +25,32 @@ function displayData() {
 }
 displayData();
 
-var selectedRow = null;
-let form = document.querySelector('.main-form');
-
+/**
+ * function which triggers when form is submitted
+ */
 function onFormSubmit() {
-    if (form!=null) {
-        var formData = readFormData();
-        if (selectedRow == null){
-             insertNewRecord(formData);
-             addDataToJson(formData);
-        }  
-        else
-            updateRecord(formData);
-        resetForm();
-    }
+    Swal.fire({
+        title: 'Do you want to create challan?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: `Create`,
+        denyButtonText: `Don't create`,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            if (form != null) {
+                var formData = readFormData();
+                if (selectedRow == null) {
+                    insertNewRecord(formData);
+                    addDataToJson(formData);
+                } else
+                    updateRecord(formData);
+                resetForm();
+            }
+            Swal.fire('Challan created!', '', 'success')
+        } else if (result.isDenied) {
+            Swal.fire('Challan wasn\'t created!', '', 'info')
+        }
+    })
 }
 
 /**
@@ -83,10 +97,34 @@ function insertNewRecord(data) {
     cell9 = newRow.insertCell(8);
     cell9.innerHTML = data.amount;
     cell10 = newRow.insertCell(9);
-    cell10.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
+    cell10.innerHTML = `<a style="position: relative;
+                                  display: inline-block;
+                                  padding: 8px 15px;
+                                  color: #fff;
+                                  background: #666600;
+                                  font-size: 12px;
+                                  text-decoration: none;
+                                  text-transform: uppercase;
+                                  overflow: hidden;
+                                  transition: .5s;
+                                  " onClick="onEdit(this)">Edit</a>
+                       <a style="position: relative;
+                       display: inline-block;
+                       padding: 8px 15px;
+                       color: #fff;
+                       background: #dc143c;
+                       font-size: 13px;
+                       text-decoration: none;
+                       text-transform: uppercase;
+                       overflow: hidden;
+                       transition: .5s;" onClick="onDelete(this)">Delete</a>`;
 }
-//Method to format data to add to json
+
+/**
+ * //formatting data to add to json
+ * @param {*} data 
+ * @returns challanData
+ */
 function formatChallanData(data) {
     let challanData = {
         fullName: data.fullName,
@@ -99,26 +137,13 @@ function formatChallanData(data) {
         guilty: data.problem,
         fineAmount: data.amount
     };
-
-    //returns all values as dataTrafficChallan
     return challanData;
 }
-function formatUpdateChallanData(data) {
-    let challanData = {
-        fullName: data.fullName,
-        address: data.address,
-        licenceNo: data.licenseno,
-        vehicleCat: data.vehicle,
-        vehicleNum: data.vehicleno,
-        createdBy: data.creater,
-        challanDate: data.date,
-        guilty: data.problem,
-        fineAmount: data.amount,
-    };
 
-    //returns all values as dataTrafficChallan
-    return challanData;
-}
+/**
+ * adding data to JSON
+ * @param {*} challan 
+ */
 function addDataToJson(challan) {
     const data = formatChallanData(challan);
     //Use of axios.post
@@ -130,8 +155,12 @@ function addDataToJson(challan) {
         });
 }
 
+/**
+ * function to update data to json
+ * @param {*} challan 
+ */
 function updateDataToJson(challan) {
-    const data = formatUpdateChallanData(challan);
+    const data = formatChallanData(challan);
     //Use of axios.post
     axios.post('http://localhost:3000/ChallanDetails', data) //using 3000 as default port
         .then(() => {
@@ -141,6 +170,10 @@ function updateDataToJson(challan) {
         });
 }
 
+/**
+ * function to delete data from json
+ * @param {} id to be deleted
+ */
 function deleteDataFromJson(id) {
     console.log(id);
     let toDelete;
@@ -155,23 +188,9 @@ function deleteDataFromJson(id) {
         })
 }
 
-function toDeleteChallan(SelectedRowIndex){
-    deleteTo= deleteDataFromJson(SelectedRowIndex);
-    console.log("Delete TO:"+deleteTo);
-    deleteLink = 'http://localhost:3000/ChallanDetails/'+deleteTo;
-    axios.delete(deleteLink);
-}
-
-function getID(selected){
-    // console.log(selected);
-    axios.get('http://localhost:3000/ChallanDetails')
-        .then(response => response.data)
-        .then(data => {
-           console.log(data[selected-1].id);
-           return (data[selected-1].id);
-        })
-}
-  
+/**
+ * function to reset form
+ */
 function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("address").value = "";
@@ -186,6 +205,10 @@ function resetForm() {
     selectedRow = null;
 }
 
+/**
+ * on edit event function
+ * @param {*} td 
+ */
 function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
     selectedRowIndex = td.parentElement.parentElement.rowIndex;
@@ -200,6 +223,10 @@ function onEdit(td) {
     document.getElementById("amount").value =  selectedRow.cells[8].innerHTML;
 }
 
+/**
+ * function to update table and json
+ * @param {*} formData 
+ */
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.date;
     selectedRow.cells[1].innerHTML = formData.fullName;
@@ -210,31 +237,51 @@ function updateRecord(formData) {
     selectedRow.cells[6].innerHTML = formData.vehicleno;
     selectedRow.cells[7].innerHTML = formData.problem;
     selectedRow.cells[8].innerHTML = formData.amount;
-    
-    console.log(selectedRowIndex);
-    deleteDataFromJson(selectedRowIndex);
-    updateDataToJson(formData);
-    
+
+    //confirmation popup
+    Swal.fire({
+        title: 'Are you sure you want to update?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: `Update`,
+        denyButtonText: `Don't update`,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            updateDataToJson(formData);
+            deleteDataFromJson(selectedRowIndex);
+            Swal.fire('Updated!', '', 'success');
+            window.location.reload();
+        } else if (result.isDenied) {
+            Swal.fire('Challan isn\'t updated!', '', 'info')
+        }
+    })
 }
 
+/**
+ * on delete event function
+ * @param {*} td table element
+ */
 function onDelete(td) {
-    if (confirm('Are you sure to delete this record ?')) {
-        row = td.parentElement.parentElement;
-        index = row.rowIndex;
-        document.getElementById("challanList").deleteRow(row.rowIndex);
-        deleteDataFromJson(index);
-        resetForm();
-    }
-}
-function validate() {
-    isValid = true;
-    if (document.getElementById("fullName").value == "") {
-        isValid = false;
-        document.getElementById("fullNameValidationError").classList.remove("hide");
-    } else {
-        isValid = true;
-        if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
-            document.getElementById("fullNameValidationError").classList.add("hide");
-    }
-    return isValid;
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+          if (result.isConfirmed) {
+              row = td.parentElement.parentElement;
+              index = row.rowIndex;
+              document.getElementById("challanList").deleteRow(row.rowIndex);
+              deleteDataFromJson(index);
+              resetForm();
+              Swal.fire(
+                  'Deleted!',
+                  'Your file has been deleted.',
+                  'success'
+              )
+          }
+      })
 }

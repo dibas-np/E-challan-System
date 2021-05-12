@@ -1,64 +1,28 @@
 {
   "ChallanDetails": [
     {
-      "fullName": "Ruben Dias",
-      "address": "Lisbon",
-      "licenceNo": "12345",
-      "vehicleCat": "B",
-      "vehicleNum": "CH 12 B 420",
-      "createdBy": "Bernado Silva",
-      "challanDate": "2020-09-17",
+      "fullName": "Ramesh Karki",
+      "address": "Balaju",
+      "licenceNo": "2507256",
+      "vehicleCat": "A",
+      "vehicleNum": "BA 25 BC E7",
+      "createdBy": "Ramesh Lamsal",
+      "challanDate": "2021-05-11",
       "guilty": "Over Speed",
-      "fineAmount": "1000",
+      "fineAmount": "500",
       "id": 1
     },
     {
-      "fullName": "Kamlesh",
-      "address": "123",
-      "licenceNo": "123",
-      "vehicleCat": "A",
-      "vehicleNum": "123",
-      "createdBy": "123",
-      "challanDate": "2021-05-01",
-      "guilty": "123",
-      "fineAmount": "123",
-      "id": 11
-    },
-    {
-      "fullName": "LOLOL",
-      "address": "123",
-      "licenceNo": "123",
-      "vehicleCat": "A",
-      "vehicleNum": "123",
-      "createdBy": "123",
-      "challanDate": "2021-05-01",
-      "guilty": "123",
-      "fineAmount": "123",
-      "id": 12
-    },
-    {
-      "fullName": "OK",
-      "address": "123",
-      "licenceNo": "123",
-      "vehicleCat": "A",
-      "vehicleNum": "123",
-      "createdBy": "123",
-      "challanDate": "2021-05-01",
-      "guilty": "123",
-      "fineAmount": "123",
-      "id": 13
-    },
-    {
-      "fullName": "Rikesh",
-      "address": "123",
-      "licenceNo": "123",
-      "vehicleCat": "A",
-      "vehicleNum": "123",
-      "createdBy": "123",
-      "challanDate": "2021-05-01",
-      "guilty": "123",
-      "fineAmount": "123",
-      "id": 16
+      "fullName": "Pujan Sharma",
+      "address": "Baneshwor",
+      "licenceNo": "12678945",
+      "vehicleCat": "D",
+      "vehicleNum": "BA 23 45 BE",
+      "createdBy": "Ramesh Lamsal",
+      "challanDate": "2021-05-10",
+      "guilty": "Drink and Drive",
+      "fineAmount": "1000",
+      "id": 2
     }
   ]
 }
