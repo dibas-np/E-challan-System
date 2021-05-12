@@ -103,7 +103,22 @@ function formatChallanData(data) {
     //returns all values as dataTrafficChallan
     return challanData;
 }
+function formatUpdateChallanData(data) {
+    let challanData = {
+        fullName: data.fullName,
+        address: data.address,
+        licenceNo: data.licenseno,
+        vehicleCat: data.vehicle,
+        vehicleNum: data.vehicleno,
+        createdBy: data.creater,
+        challanDate: data.date,
+        guilty: data.problem,
+        fineAmount: data.amount,
+    };
 
+    //returns all values as dataTrafficChallan
+    return challanData;
+}
 function addDataToJson(challan) {
     const data = formatChallanData(challan);
     //Use of axios.post
@@ -115,11 +130,47 @@ function addDataToJson(challan) {
         });
 }
 
-function deleteDataFromJson(e) {
-   let id = e;
-    axios.delete('http://localhost:3000/ChallanDetails/' + id)
+function updateDataToJson(challan) {
+    const data = formatUpdateChallanData(challan);
+    //Use of axios.post
+    axios.post('http://localhost:3000/ChallanDetails', data) //using 3000 as default port
+        .then(() => {
+            console.log("New Challan Updated."); //Display output in console if submission is successful
+        }).catch((errorStore) => { //to Catch errors, if error occurs
+            console.log(errorStore);
+        });
 }
 
+function deleteDataFromJson(id) {
+    console.log(id);
+    let toDelete;
+    axios.get('http://localhost:3000/ChallanDetails')
+        .then(response => response.data)
+        .then(data => {
+           console.log(data[id-1].id);
+           toDelete=data[id-1].id;
+           console.log("To Delete"+toDelete);
+           deleteLink = 'http://localhost:3000/ChallanDetails/'+toDelete;
+           axios.delete(deleteLink);
+        })
+}
+
+function toDeleteChallan(SelectedRowIndex){
+    deleteTo= deleteDataFromJson(SelectedRowIndex);
+    console.log("Delete TO:"+deleteTo);
+    deleteLink = 'http://localhost:3000/ChallanDetails/'+deleteTo;
+    axios.delete(deleteLink);
+}
+
+function getID(selected){
+    // console.log(selected);
+    axios.get('http://localhost:3000/ChallanDetails')
+        .then(response => response.data)
+        .then(data => {
+           console.log(data[selected-1].id);
+           return (data[selected-1].id);
+        })
+}
   
 function resetForm() {
     document.getElementById("fullName").value = "";
@@ -159,16 +210,19 @@ function updateRecord(formData) {
     selectedRow.cells[6].innerHTML = formData.vehicleno;
     selectedRow.cells[7].innerHTML = formData.problem;
     selectedRow.cells[8].innerHTML = formData.amount;
-
+    
+    console.log(selectedRowIndex);
     deleteDataFromJson(selectedRowIndex);
-    addDataToJson(formData);
+    updateDataToJson(formData);
     
 }
 
 function onDelete(td) {
     if (confirm('Are you sure to delete this record ?')) {
         row = td.parentElement.parentElement;
+        index = row.rowIndex;
         document.getElementById("challanList").deleteRow(row.rowIndex);
+        deleteDataFromJson(index);
         resetForm();
     }
 }
