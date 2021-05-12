@@ -13,18 +13,6 @@
       "id": 1
     },
     {
-      "fullName": "Ram",
-      "address": "KTM",
-      "licenceNo": "123",
-      "vehicleCat": "B",
-      "vehicleNum": "BA 1 G 123",
-      "createdBy": "KP Baa",
-      "challanDate": "2021-05-12",
-      "guilty": "Over Speed",
-      "fineAmount": "500",
-      "id": 2
-    },
-    {
       "fullName": "Test",
       "address": "KTM",
       "licenceNo": "123",
@@ -47,6 +35,42 @@
       "guilty": "123",
       "fineAmount": "123",
       "id": 4
+    },
+    {
+      "fullName": "12345",
+      "address": "123",
+      "licenceNo": "123",
+      "vehicleCat": "A",
+      "vehicleNum": "123",
+      "createdBy": "123",
+      "challanDate": "2021-05-01",
+      "guilty": "123",
+      "fineAmount": "123",
+      "id": 5
+    },
+    {
+      "fullName": "Ruben Shrestha",
+      "address": "Lisbon",
+      "licenceNo": "12345",
+      "vehicleCat": "B",
+      "vehicleNum": "CH 12 B 420",
+      "createdBy": "Bernado Silva",
+      "challanDate": "2020-09-17",
+      "guilty": "Over Speed",
+      "fineAmount": "1000",
+      "id": 6
+    },
+    {
+      "fullName": "Shyam",
+      "address": "KTM",
+      "licenceNo": "123",
+      "vehicleCat": "B",
+      "vehicleNum": "BA 1 G 123",
+      "createdBy": "KP Baa",
+      "challanDate": "2021-05-12",
+      "guilty": "Over Speed",
+      "fineAmount": "500",
+      "id": 7
     }
   ]
 }

@@ -115,6 +115,12 @@ function addDataToJson(challan) {
         });
 }
 
+function deleteDataFromJson(e) {
+   let id = e;
+    axios.delete('http://localhost:3000/ChallanDetails/' + id)
+}
+
+  
 function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("address").value = "";
@@ -131,6 +137,7 @@ function resetForm() {
 
 function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
+    selectedRowIndex = td.parentElement.parentElement.rowIndex;
     document.getElementById("date").value =  selectedRow.cells[0].innerHTML;
     document.getElementById("fullName").value =  selectedRow.cells[1].innerHTML;
     document.getElementById("licenseno").value =  selectedRow.cells[2].innerHTML;
@@ -153,27 +160,9 @@ function updateRecord(formData) {
     selectedRow.cells[7].innerHTML = formData.problem;
     selectedRow.cells[8].innerHTML = formData.amount;
 
-
-    axios.get('http://localhost:3000/ChallanDetails')
-        .then(response => response.data)
-        .then(data => {
-            data.forEach(item => {
-                if (item.id == selectedRow) {
-                    item.fullName = formData.fullName;
-                    item.address = formData.address;
-                    item.licenceNo = formData.licenseno;
-                    item.vehicleCat = formData.vehicle;
-                    item.vehicleNum = formData.vehicleno;
-                    item.createdBy = formData.creater;
-                    item.challanDate = formData.date;
-                    item.guilty = formData.problem;
-                    item.fineAmount = formData.amount;
-                    return;
-                }
-            })
-        })
-
-
+    deleteDataFromJson(selectedRowIndex);
+    addDataToJson(formData);
+    
 }
 
 function onDelete(td) {
