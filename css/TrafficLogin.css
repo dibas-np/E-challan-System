@@ -22,14 +22,14 @@
   text-align: center; /* align text to center */
   color: #030730;
   margin-bottom: 40px; /* set margin at bottom only */
-  font-size: 42px; /* font size to heading */
+  font-size: 36px; /* font size to heading */
 }
 
 .main-login label{
   padding: 50px; /* give padding to all sides */
   line-height: 50px; /* set height of text line */
   color: #030730; /* font color #030730*/
-  font-size: 28px;  /* set font size of label text */
+  font-size: 24px;  /* set font size of label text */
 }
 
 .main-login input{
@@ -41,19 +41,21 @@
   border-radius: 10px; /*border radius on all corners */
 }
 
-.main-login button{
+#loginSubmitt{
   background-color: #DC143C;
   color: white; /* set font color */
   padding: 10px 20px;
-  margin-top: 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 20px;
   width: 100%; /* set full width */
+  display: block;
+  margin: 10px 0;
+  text-align: center;
 }
 
-.main-login button:hover{
+#loginSubmitt:hover{
   background-color: #75031a; /* Change color on button hover */
 }
 
@@ -63,7 +65,7 @@
 
 .main-register p{
   text-align: center; /* make text appear in center alignment */
-  font-size: 28px;
+  font-size: 24px;
   color: #FFFFFF;
   padding-top: 100px;
 }
@@ -76,7 +78,7 @@
   border: none; /* remove default button border and set to none */
   border-radius: 10px;
   cursor: pointer;/* cursor as link pointer */
-  font-size: 28px; /* font size of button */
+  font-size: 20px; /* font size of button */
   display: flex; /* to make button center */
 }
 
@@ -107,6 +109,9 @@
   }
   .main-register{
     padding: auto;
+  }
+  .main-register p{
+    padding-top: 20px;
   }
   .main-login{
     padding: auto;

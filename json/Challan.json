@@ -1,1 +1,16 @@
-{}
+{
+    "ChallanDetails": [
+      {
+        "fullName": "Ruben Dias",
+        "address": "Lisbon",
+        "licenceNo": "12345",
+        "vahicleCat": "Type B",
+        "vahicleNum": "CH 12 B 420",
+        "createdBy": "Bernado Silva",
+        "challanDate": "2020-09-17",
+        "guilty": "Over Speed",
+        "fineAmount": "1000",
+        "id": 1
+      }
+    ]
+  }

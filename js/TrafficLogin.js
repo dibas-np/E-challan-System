@@ -7,7 +7,7 @@ function TrafficLogin() {
 		if(username == "traffic" && password == "pass") { //initial values for frontend part
 			//Backend will have values from database in Sprint 2
             window.location.href = "../html/TrafficChallan.html" // redirects to Challan Page if true
-			return
+			// return
 		}
     //checks if username or password is empty and display appropriate message
     if(username.trim() ==="" || password.trim() ===""){

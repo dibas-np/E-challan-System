@@ -1,6 +1,6 @@
-// Admission Form Details Keeping in JSON Server
+//Form Details Keeping in JSON Server
 class TrafficChallanDetails{ //Class TrafficChallanDetails 
-    //Constructor to store datas of admission form as given names/parameters
+    //Constructor to store datas of form as given names/parameters
       constructor(fullName, address, licenceNo, vehicleCat, vehicleNum, createdBy, challanDate, guilty, fineAmount){
         this.fullName = fullName;
         this.address = address;
@@ -44,11 +44,10 @@ class TrafficChallanDetails{ //Class TrafficChallanDetails
     
     }
     
-    //admission form 
-    let challanForm = document.querySelector('.challan-form');
+    //challan form 
+    let challanForm = document.querySelector('#challan');
     challanForm.addEventListener('submit', (eventObj)=>{
       eventObj.preventDefault(); //Prevents default behaviour
-      // Admission Form variables(values) declaration
       let fullName = document.querySelector('#fullName').value;
       let address = document.querySelector('#address').value;
       let licenceNo = document.querySelector('#licenseno').value;
@@ -60,7 +59,7 @@ class TrafficChallanDetails{ //Class TrafficChallanDetails
       let fineAmount = document.querySelector('#amount').value;
       
       //Making new object of the class TrafficChallanDetails
-      let trafficChallanDetail = new TrafficChallanDetails(fullName, address, licenceNo, vehicleCat, vehicleNum, createdBy, challanDate, address, fineAmount);
+      let trafficChallanDetail = new TrafficChallanDetails(fullName, address, licenceNo, vehicleCat, vehicleNum, createdBy, challanDate, guilty, fineAmount);
       trafficChallanDetail.trafficChallanDetail(); //Calling method trafficChallanDetail from the Class
     
       eventObj.target.reset(); //Resets this form after every submission 

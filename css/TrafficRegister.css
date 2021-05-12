@@ -24,7 +24,7 @@
     text-align: center; /* Bring text content to center*/
     color: #030730;
     margin-bottom: 40px; /* Set margin at bottom only*/
-    font-size: 42px;
+    font-size: 36px;
   }
   
   .main-register label{
@@ -58,7 +58,7 @@
     border: none; /* removes default button border */
     border-radius: 10px;
     cursor: pointer; /* Set cursor as pointer*/
-    font-size: 28px;
+    font-size: 24px;
     display: flex; /* to make button center */
   }
 
@@ -82,7 +82,7 @@
     width: 100%; /* set full width */
     border-radius: 10px;
     cursor: pointer;
-    font-size: 28px; /* font size of button */
+    font-size: 24px; /* font size of button */
     margin-top: 20px; /* Set margin at top only*/
   }
 
