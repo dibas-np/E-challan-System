@@ -1,16 +1,28 @@
 {
-    "ChallanDetails": [
-      {
-        "fullName": "Ruben Dias",
-        "address": "Lisbon",
-        "licenceNo": "12345",
-        "vahicleCat": "Type B",
-        "vahicleNum": "CH 12 B 420",
-        "createdBy": "Bernado Silva",
-        "challanDate": "2020-09-17",
-        "guilty": "Over Speed",
-        "fineAmount": "1000",
-        "id": 1
-      }
-    ]
-  }
+  "ChallanDetails": [
+    {
+      "fullName": "Ruben Dias",
+      "address": "Lisbon",
+      "licenceNo": "12345",
+      "vahicleCat": "Type B",
+      "vahicleNum": "CH 12 B 420",
+      "createdBy": "Bernado Silva",
+      "challanDate": "2020-09-17",
+      "guilty": "Over Speed",
+      "fineAmount": "1000",
+      "id": 1
+    },
+    {
+      "fullName": "Ram",
+      "address": "KTM",
+      "licenceNo": "123",
+      "vehicleCat": "B",
+      "vehicleNum": "BA 1 G 123",
+      "createdBy": "KP Baa",
+      "challanDate": "2021-05-12",
+      "guilty": "Over Speed",
+      "fineAmount": "500",
+      "id": 2
+    }
+  ]
+}
