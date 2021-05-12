@@ -29,28 +29,43 @@ displayData();
  * function which triggers when form is submitted
  */
 function onFormSubmit() {
-    Swal.fire({
-        title: 'Do you want to create challan?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: `Create`,
-        denyButtonText: `Don't create`,
-    }).then((result) => {
-        if (result.isConfirmed) {
-            if (form != null) {
-                var formData = readFormData();
-                if (selectedRow == null) {
+    if (form != null) {
+        var formData = readFormData();
+        if (selectedRow == null) {
+            Swal.fire({
+                title: 'Do you want to create challan?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: `Create`,
+                denyButtonText: `Don't create`,
+            }).then((result) => {
+                if (result.isConfirmed) {
                     insertNewRecord(formData);
                     addDataToJson(formData);
-                } else
+                    Swal.fire('Challan created!', '', 'success')
+                } else if (result.isDenied) {
+                    Swal.fire('Challan wasn\'t created!', '', 'info')
+                }
+            })
+        } else{
+            Swal.fire({
+                title: 'Do you want to update challan?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: `Update`,
+                denyButtonText: `Don't update`,
+            }).then((result) => {
+                if (result.isConfirmed) {
                     updateRecord(formData);
-                resetForm();
-            }
-            Swal.fire('Challan created!', '', 'success')
-        } else if (result.isDenied) {
-            Swal.fire('Challan wasn\'t created!', '', 'info')
+                    Swal.fire('Challan updated!', '', 'success')
+                } else if (result.isDenied) {
+                    Swal.fire('Challan wasn\'t updated!', '', 'info')
+                }
+            })
         }
-    })
+        resetForm();
+    }
+   
 }
 
 /**
@@ -98,16 +113,15 @@ function insertNewRecord(data) {
     cell9.innerHTML = data.amount;
     cell10 = newRow.insertCell(9);
     cell10.innerHTML = `<a style="position: relative;
-                                  display: inline-block;
-                                  padding: 8px 15px;
-                                  color: #fff;
-                                  background: #666600;
-                                  font-size: 12px;
-                                  text-decoration: none;
-                                  text-transform: uppercase;
-                                  overflow: hidden;
-                                  transition: .5s;
-                                  " onClick="onEdit(this)">Edit</a>
+                        display: inline-block;
+                        padding: 8px 15px;
+                        color: #fff;
+                        background: #666600;
+                        font-size: 12px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        overflow: hidden;
+                        transition: .5s;" onClick="onEdit(this)">Edit</a>
                        <a style="position: relative;
                        display: inline-block;
                        padding: 8px 15px;
