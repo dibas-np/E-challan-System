@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="images/header_icon.png" type="ico" sizes="16x16">
-  <link rel="stylesheet" type="text/css" href="css/home.css" />
-  <title>E-challan System</title>
+  <link rel="icon" href="../images/header_icon.png" type="ico" sizes="16x16">
+  <link rel="stylesheet" type="text/css" href="../css/home.css" />
+  <title>Admin Login</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="https://kit.fontawesome.com/9d93f40cf0.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
@@ -20,8 +21,8 @@
         <!--Navigation bar top logo and search bar section-->
         <div class="top-logo-section">
           <div class="logo">
-            <a href="#">
-              <img src="images/logo.png" alt="Logo" width="206" height="86" />
+            <a href="../index.html">
+              <img src="../images/logo.png" alt="Logo" width="206" height="86" />
             </a>
           </div>
           <div class="search-container">
@@ -37,27 +38,26 @@
               <i class="far fa-user"></i>
             </button>
             <div class="dropdown-content">
-              <a href="html/AdminLogin.html">Admin</a><br>
-              <a href="html/TrafficLogin.html">Traffic</a><br>
-              <a href="html/UserLogin.html">User</a><br>
+              <a href="#">Admin</a><br>
+              <a href="TrafficLogin.html">Traffic</a><br>
+              <a href="UserLogin.html">User</a><br>
             </div>
           </div>
         </div>
-
         <!--Navigation bar Menu section-->
         <div class="nav-menu-section">
           <ul>
             <li>
-              <a class="menu-items" href="#">Home</a>
+              <a class="menu-items" href="../index.html">Home</a>
             </li>
             <li>
-              <a class="menu-items" href="html/TrafficLogin.html">Challan</a>
+              <a class="menu-items" href="TrafficChallan.html">Challan</a>
             </li>
             <li>
-              <a class="menu-items" href="html/UserLogin.html">Payment</a>
+              <a class="menu-items" href="UserLogin.html">Payment</a>
             </li>
             <li>
-              <a class="menu-items" href="html/News.html">News</a>
+              <a class="menu-items" href="#">News</a>
             </li>
             <li>
               <a class="menu-items" href="#">About Us</a>
@@ -72,80 +72,84 @@
   </header>
   <!--End of Navigation Bar-->
 
-  <!--Home Page Main Section-->
-  <section class="main-section">
-    <img class="main-section-bg" src="images/home_page_header_background.png" />
-    <div class="main-section-container"></div>
-    <div class="main-section-img">
-      <img alt="Flag of Nepal" src="images/Flag_of_Nepal.svg" />
-    </div>
-    <div style="opacity: 1" class="main-section-text">
-      Check and Pay Traffic Police Fines in <br />Kathmandu Nepal
-    </div>
-    <div class="main-section-button">
-      <button type="submit" class="home-learn-more-button">Learn More</button>
-    </div>
-  </section>
-  <!--End of Main Section-->
-
-  <!--Main Section Description-->
-  <section class="main-description">
-    <h1>Do You Know about E-Challan?</h1>
-    <p1>As the name suggests, e-challan is a digitised challan.</p1>
-    <p2>E-challan – Digital Traffic Enforcement Solution is a government initiative undertaken by the Ministry of Road
-      Transport and Highways in an attempt to enforce traffic laws more effectively and strictly.</p2>
-    <p3>Through this, the government has decided to nearly do away with physical challans.</p3>
-    <h2>How does e-challans work?</h2>
-    <p4>You are cruising through the desolate Delhi roads in the nocturnal hours with no care for worldly matters
-      whatsoever and have disregarded a red light in tandem with your blithe. But, sadly, in contrast to your mood, you
-      are still very much on Earth and in Kathmandu, Nepal where CCTV cameras have been installed across the city.
-      Disrupting your elation, you hear your message tone calling you to a text from the KTM Traffic Police Department
-      notifying you that an e-challan has been generated to your name for inadvertently crossing a red light.</p4>
-    <p5>This is how an e-challan works.</p5>
-  </section>
-  <!--End of Main Description Section-->
-
-  <!--News Section-->
-  <section class="news-section">
-    <div class="trending-box-background">
-      <h1>Trending News Box</h1>
-    </div>
-    <div class="news-section-row">
-      <div class="col-1">
-        <figure class="news">
-          <img src="images/news_section_image_1.webp" alt="placeholder">
-        </figure>
-        <div class="news-section-box1"></div>
-        <figcaption class="news-caption">
-          <p>March 11,2021</p>
-          <h2>Protestor Protesting for Positive Change</h2>
-        </figcaption>
-      </div>
-      <div class="col-2">
-        <div class="news-section-image">
-          <figure class="news">
-            <img src="images/image2.png" alt="placeholder" style="width:564px;margin-bottom:14px">
-          </figure>
+  <!--Start of News Section-->
+  <section clas="collections">
+    <div class="container">
+        <div class="collections-title">
+            <h1>Collections</h1>
         </div>
-        <div class="news-section-image">
-          <figure class="news">
-            <img class="news-section-image2" src="images/image3.png" alt="placeholder" style="width:564px">
-          </figure>
+
+        <div class="collections-row">
+            <figure class="collections-image">
+                <img src="../images/news_section_image_1.webp" alt="placeholder">
+            </figure>
+            <figcaption class="collections-caption">
+                <h1>Protestor protesting for Positive Change</h1>
+                <p>Brian Tallerico &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>In the downtown protestors are protesting for the change in the society.</p1>
+            </figcaption>
         </div>
-        <div class="news-section-box3"></div>
-        <div class="news-section-box2"></div>
-        <figcaption class="news-caption2">
-          <p>March 11,2021</p>
-          <h2>Huge Traffic in New York City</h2>
-        </figcaption>
-        <figcaption class="news-caption3">
-          <p>March 11,2021</p>
-          <h2>A great road in a great city</h2>
-        </figcaption>
-      </div>
+
+        <div class="collections-row">
+            <figure class="collections-image">
+                <img src="../images/image2.png" alt="placeholder">
+            </figure>
+            <figcaption class="collections-caption">
+                <h1>Huge Traffic in New York City</h1>
+                <p>Ramesh Karki &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>There is the huge trafffic aroung the New York City in the mass lockdown too but it is here.</p1>
+            </figcaption>
+        </div>
+
+        <div class="collections-row">
+            <figure class="collections-image">
+                <img src="../images/image3.png" alt="placeholder">
+            </figure>
+            <figcaption class="collections-caption">
+                <h1>Great Road in Great City</h1>
+                <p>Brian Tallerico &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>Amazing road in the very amazing city.</p1>
+            </figcaption>
+        </div>
+
+        <div class="collections-row">
+            <figure class="collections-image">
+                <img src="../images/newsimage.jpg" alt="placeholder">
+            </figure>
+            <figcaption class="collections-caption">
+                <h1>Fire in the City</h1>
+                <p>Ramesh Sharma &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>There was the huge fire in the Kathmandu.</p1>
+            </figcaption>
+        </div>
+
+        <div class="collections-row">
+            <figure class="collections-image">
+                <img src="../images/newsimage2.jpg" alt="placeholder">
+            </figure>
+            <figcaption class="collections-caption">
+                <h1>Taxi Driver Gets in Fight</h1>
+                <p>Kamlesh Prasad &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>Driver got into the fight with the passenger.</p1>
+            </figcaption>
+        </div>
+
+        <div class="collections-row">
+            <figure class="collections-image">
+                <img src="../images/news3.jpg" alt="placeholder">
+            </figure>
+            <figcaption class="collections-caption">
+                <h1>Covid hits big</h1>
+                <p>The Editors &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>Covid has been increasing day by day.</p1>
+            </figcaption>
+        </div>
     </div>
-  </section>
+</section>
+
+
   <!--End of News Section-->
+
 
   <!--Footer Section-->
   <footer>
@@ -182,7 +186,7 @@
           </li>
         </ul>
       </div>
-    
+
       <div class="footer-menu-container">
         <div class="footer-menu">
           <h1>Traffic Police</h1>
