@@ -3,7 +3,8 @@ body{
     background-color: #000535;
 }
 .contact-form-title{
-    font-family: freight-big-pro;
+    /* font-family: freight-big-pro; */
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 25px;
@@ -46,7 +47,8 @@ body{
     padding: 4px 10px;
 }
 .contact-form button , input , textarea{
-    font-family: Georgia,Times New Roman,serif;
+    /* font-family: Georgia,Times New Roman,serif; */
+    font-family: "Roboto", sans-serif;
 }
 
 .contact-form button[type="submit"]{
