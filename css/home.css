@@ -120,6 +120,7 @@ header {
   width: auto;
   height: 63px;
   background-color: white;
+  min-width: 480px;
 }
 
 ul {
@@ -441,11 +442,130 @@ p5 {
 .row-copyright {
   text-align: center;
   height: 100px;
-  background-color: #00031e;
+  background-color: #030730;
 }
 
 .row-copyright p {
   padding-top: 40px;
+  display: block;
 }
 
 /*End of Footer*/
+
+/*Responsive*/
+@media screen and (max-width: 937px){
+  .footer-menu h1 {
+    font-size: 25px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .footer-menu h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 937px){
+ .row-social-icons{
+   margin-right: 150px;
+ }
+}
+
+@media screen and (max-width: 800px){
+  .nav-menu-section{
+    height: 50px;
+  }
+  ul{
+    right: -180px;
+  }
+  ul li a{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 728px){
+  .footer-container h5{
+    font-size: 30px;
+  }
+  .footer-container {
+    height: 400px;
+    padding: 50px 50px 20px 50px;
+  }
+  .footer-menu h1 {
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 15px;
+  }
+  
+  .footer-menu h2 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 680px){
+  .searchTerm{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 580px){
+  .nav-menu-section{
+    height: 40px;
+  }
+  ul li a{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 520px){
+  .footer-container {
+    height: 300px;
+    padding: 50px 50px 20px 50px;
+  }
+  .footer-menu h1 {
+    font-size: 15px;
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .footer-menu h2 {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 503px){
+  .footer-container {
+    height: 0px;
+    visibility: hidden;
+  }
+  .row-copyright{
+    height: 40px;
+    background-color: #000535;
+  }
+  .row-copyright p{
+    padding: 10px;
+    display: inline;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 490px){
+  .nav-menu-section{
+    height: 30px;
+  }
+  ul li{
+    margin: 3px;
+  }
+  ul li a{
+    font-size: 15px;
+    padding: 2px;
+  }
+  .searchButton{
+    visibility: hidden;
+  }
+}
