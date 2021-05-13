@@ -22,7 +22,7 @@ body{
 .contact-form-fields{
     width: calc(100% - 24px);   
     padding: 4px 10px; 
-    font-size: 17px; 
+    font-size: 19px; 
 }
 
 .contact-form div{
@@ -42,7 +42,7 @@ body{
     max-width: 100%;
     position: relative;
     vertical-align: top;
-    font-size: 17px;
+    font-size: 19px;
     cursor: pointer;
     padding: 4px 10px;
 }
