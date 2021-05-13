@@ -99,7 +99,7 @@ function myPrint() {
     '<br>Vehicle No: ' + trafficChallanDetail.vehicleNum +
     '<br>Created By: ' + trafficChallanDetail.createdBy + 
     '<br>Challan Date: ' + trafficChallanDetail.challanDate+ 
-    '<br>Issue For' + trafficChallanDetail.guilty+
+    '<br>Issue For: ' + trafficChallanDetail.guilty+
     '<br>Fine Amount: ' + trafficChallanDetail.fineAmount + '</h3> -------------------------------------------------------------------',
     showCloseButton: true,
     showCancelButton: true,

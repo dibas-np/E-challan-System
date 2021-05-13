@@ -45,7 +45,7 @@
 
 .buttonss{
     display: flex;
-    justify-content: center;
+    justify-content: center; /* bring all content center */
 }
 .main-form button, .buttonss p {
     background-color: #f3f2f2;
@@ -55,7 +55,7 @@
     width: 50%;
     margin-top: 20px;
     font-weight: 555;
-    text-align: center;
+    text-align: center; /* bring all text center */
     cursor: pointer;
     border: none; /* border removing */
     margin-right: 20px;
@@ -96,3 +96,4 @@
         font-size: 18px; /* decrease font size */
     }
 }
+/* End of Code */
