@@ -24,5 +24,23 @@
       "fineAmount": "1000",
       "id": 2
     }
+  ],
+  "TrafficUsers": [
+    {
+      "username": "user",
+      "phone": "9876543210",
+      "address": "Kathmandu",
+      "email": "np0@email.np",
+      "password": "pass",
+      "id": 1
+    },
+    {
+      "username": "user",
+      "phone": "1",
+      "address": "KTM",
+      "email": "rabinsraizee@gmail.com",
+      "password": "pass",
+      "id": 2
+    }
   ]
 }

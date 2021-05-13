@@ -80,10 +80,10 @@
         </div>
         <div class="main-register">         <!-- Register Part -->
             <h1>Traffic Registration</h1>
-            <form class="form-login" action="GET">
+            <form id="traffReg" class="form-login" action="POST">
                 <div class="labels"> <!-- To keep Label Name -->
                   <!-- <br> tag is used as single line break  -->
-                    <label for="name"><b>Name</b></label> <br>
+                    <label for="name"><b>Username</b></label> <br>
                     <label for="phone"><b>Phone</b></label> <br>               
                     <label for="address"><b>Address</b></label> <br>                
                     <label for="email"><b>Email</b></label> <br>       
@@ -93,11 +93,11 @@
                 <div class="input-field"><!-- To keep text fields -->
                   <!-- placeholder is used to write text information in input textfields 
                        all text fields options are set to required for successful Login -->
-                    <input type="text" placeholder="Enter Name" name="name" required> <br>
-                    <input type="number" placeholder="Enter Pnone" name="phone" required> <br>
-                    <input type="text" placeholder="Enter Address" name="address" required> <br>
-                    <input type="email" placeholder="Enter Email" name="email" required> <br>
-                    <input type="password" placeholder="Enter Password" name="pass" required><br>
+                    <input id="unameT" type="text" placeholder="Enter Userame" name="name" required> <br>
+                    <input id="phoneT" type="number" placeholder="Enter Pnone" name="phone" required> <br>
+                    <input id="addressT" type="text" placeholder="Enter Address" name="address" required> <br>
+                    <input id="emailT" type="email" placeholder="Enter Email" name="email" required> <br>
+                    <input id="passwordT" type="password" placeholder="Enter Password" name="pass" required><br>
                     <input type="password" placeholder="Re-enter Password" name="pass" required><br>
                     <a href="TrafficLogin.html"><button type="submit">Register</button></a> 
                 </div>
@@ -172,5 +172,7 @@
       </div>
     </footer>
     <!--End of Footer Section-->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../js/TrafficRegister.js"></script>
   </body>
 </html>
