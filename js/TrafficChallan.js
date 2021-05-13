@@ -43,29 +43,6 @@ class TrafficChallanDetails{ //Class TrafficChallanDetails
       }
 }
     
-    // //challan form 
-    // let challanForm = document.querySelector('#challan');
-    // challanForm.addEventListener('submit', (eventObj)=>{
-    //   eventObj.preventDefault(); //Prevents default behaviour
-    //   let fullName = document.querySelector('#fullName').value;
-    //   let address = document.querySelector('#address').value;
-    //   let licenceNo = document.querySelector('#licenseno').value;
-    //   let vehicleCat = document.querySelector('#vehicle').value;
-    //   let vehicleNum = document.querySelector('#vehicleno').value;
-    //   let createdBy = document.querySelector('#creater').value;
-    //   let challanDate = document.querySelector('#date').value;
-    //   let guilty = document.querySelector('#problem').value;
-    //   let fineAmount = document.querySelector('#amount').value;
-      
-    //   //Making new object of the class TrafficChallanDetails
-    //   let trafficChallanDetail = new TrafficChallanDetails(fullName, address, licenceNo, vehicleCat, vehicleNum, createdBy, challanDate, guilty, fineAmount);
-    //   trafficChallanDetail.trafficChallanDetail(); //Calling method trafficChallanDetail from the Class
-    
-    //   eventObj.target.reset(); //Resets this form after every submission 
-    // });
-
-
-// if(fullName == "" && address == "" && licenceNo == "" && vehicleCat == "" && vehicleNum == "" && createdBy == "" && challanDate == "" && guilty == "" && fineAmount == "") { 
 // Function to give feedback 
 function TrafficChallan() { 
       let fullName = document.querySelector('#fullName').value;
@@ -140,5 +117,4 @@ function myPrint() {
   }) 
 
 }
-
 //end of the code
