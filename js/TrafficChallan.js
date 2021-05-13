@@ -13,7 +13,7 @@ class TrafficChallanDetails{ //Class TrafficChallanDetails
         this.fineAmount = fineAmount;
       }
     
-      //Method to make data of admission ready through this variables
+      //Method to make data of challan ready through this variables
       makeDataChallan(){
         let dataTrafficChallan = {
           fullName : this.fullName,
@@ -64,7 +64,7 @@ function TrafficChallan() {
         confirmButtonText: "Print Preview",
         cancelButtonText: "Print Later"
       }).then((result) => {
-        if (result.isConfirmed) {
+        if (result.isConfirmed) { //if user clicks on yes then goes to myPrint function
           myPrint();
         }
       }) 
@@ -73,6 +73,7 @@ function TrafficChallan() {
 
 //To print challan 
 function myPrint() {
+  // Variables of challan details
   let fullName = document.querySelector('#fullName').value;
   let address = document.querySelector('#address').value;
   let licenceNo = document.querySelector('#licenseno').value;
@@ -86,6 +87,7 @@ function myPrint() {
   
   let trafficChallanDetail = new TrafficChallanDetails(fullName, address, licenceNo, vehicleCat, vehicleNum, createdBy, challanDate, guilty, fineAmount);
   
+  // use of html in sweet alert to print the challan details in pop up window
   Swal.fire({
     title: 'Print Preview',
     html: '<h2 style="text-align:left; color:red;padding-top: 10px;"> Challan Details </h2>' +
@@ -105,7 +107,7 @@ function myPrint() {
     confirmButtonText: "Print Now",
     cancelButtonText: "Print Later",
   }).then((result) => {
-    if (result.isConfirmed) {
+    if (result.isConfirmed) { //Checks if the user clicks Print Now
       swal.fire({ //swal is SweetAlert in JavaScript
         icon: 'success', //icon for display message
         title: 'Print Success', //title of pop-up message
