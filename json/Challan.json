@@ -1,0 +1,16 @@
+{
+  "ChallanDetails": [
+    {
+      "fullName": "James Bahadur",
+      "address": "Kathmandu",
+      "licenceNo": "12345",
+      "vahicleCat": "Category B",
+      "vahicleNum": "CH 12 B 420",
+      "createdBy": "Jung Bahadur",
+      "challanDate": "2021-09-17",
+      "guilty": "Drink and Drive",
+      "fineAmount": "1000",
+      "id": 1
+    }
+  ]
+}
