@@ -11,18 +11,6 @@
       "guilty": "Drink and Drive",
       "fineAmount": "1000",
       "id": 1
-    },
-    {
-      "fullName": "Test Name",
-      "address": "KTM, Nepal",
-      "licenceNo": "012345",
-      "vehicleCat": "B",
-      "vehicleNum": "BA 2 G 420 ",
-      "createdBy": "Test Name II",
-      "challanDate": "2021-05-13",
-      "guilty": "Over Speed",
-      "fineAmount": "1000",
-      "id": 2
     }
   ],
   "TrafficUsers": [
