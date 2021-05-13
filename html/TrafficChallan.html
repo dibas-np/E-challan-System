@@ -72,7 +72,7 @@
         </nav>
       </div>
     </header>
-<!-- create: name,place,license number,vehicle number, vehicle type, created by,created date,problem,fine -->
+    
     <!-- Start of Traffic Challan Section -->
     <section class="main-form">
       <form  id="challan" class="challan-form" method="POST">
@@ -123,8 +123,8 @@
           </div>
         </div>
         <div class="buttonss">
-          <button id="submitChallan" type="submit" >Create</button>
-          <button id="printChallan" type="menu" onclick="myPrint()" >Print</button>
+          <p onclick="TrafficChallan()" id="submitChallan" >Create</p>
+          <p id="printChallan" onclick="myPrint()" >Print</p>
         </div>
       </form>
    </section>
@@ -199,7 +199,6 @@
     <!-- JavaScript for Login -->
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="../js/TrafficChallan.js"></script>
-        <script src="../js/script.js"></script>
   </body>
 </html>
 <!-- end of code -->
