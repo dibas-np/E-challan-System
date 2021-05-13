@@ -7,136 +7,161 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="../images/header_icon.png" type="ico" sizes="16x16">
   <link rel="stylesheet" type="text/css" href="../css/home.css" />
-  <title>News</title>
+  <link rel="stylesheet" type="text/css" href="../css/About.css" />
+  <title>About Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="https://kit.fontawesome.com/9d93f40cf0.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <header class="site-header">
-    <div class="header-container">
-      <nav class="main-nav">
-        <!--Navigation bar top logo and search bar section-->
-        <div class="top-logo-section">
-          <div class="logo">
-            <a href="../index.html">
-              <img src="../images/logo.png" alt="Logo" width="206" height="86" />
-            </a>
-          </div>
-          <div class="search-container">
-            <div class="search">
-              <input type="text" class="searchTerm" placeholder="What are you looking for?" />
-              <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-              </button>
+    <!-- Navigation Bar -->
+    <header class="site-header">
+        <div class="header-container">
+            <nav class="main-nav">
+                <!--Navigation bar top logo and search bar section-->
+                <div class="top-logo-section">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo.png" alt="Logo" width="206" height="86" />
+                        </a>
+                    </div>
+                    <div class="search-container">
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder="What are you looking for?" />
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-home">
+                        <button style="font-size: 30px" type="submit" class="userButtonNav">
+                            <i class="far fa-user"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="AdminLogin.html">Admin</a><br>
+                            <a href="TrafficLogin.html">Traffic</a><br>
+                            <a href="UserLogin.html">User</a><br>
+                        </div>
+                    </div>
+                </div>
+                <!--Navigation bar Menu section-->
+                <div class="nav-menu-section">
+                    <ul>
+                        <li>
+                            <a class="menu-items" href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="menu-items" href="TrafficChallan.html">Challan</a>
+                        </li>
+                        <li>
+                            <a class="menu-items" href="UserLogin.html">Payment</a>
+                        </li>
+                        <li>
+                            <a class="menu-items" href="News.html">News</a>
+                        </li>
+                        <li>
+                            <a class="menu-items" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="menu-items" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--End of Navigation Bar-->
+    
+    <!-- start of About Us Page -->
+    <main class="about-us">
+        <div class="container">
+            <div class="about-us-title">
+                <h1>About Us</h1>
             </div>
-          </div>
-          <div class="user-home">
-            <button style="font-size: 30px" type="submit" class="userButtonNav">
-              <i class="far fa-user"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="AdminLogin.html">Admin</a><br>
-              <a href="TrafficLogin.html">Traffic</a><br>
-              <a href="UserLogin.html">User</a><br>
+            <div class="about-us-para">
+                <p>Since everything is on an electronic platform, the concept of e- challan system has been introduced.
+                    A vehicle e challan is a computer-generated challan used by the Traffic Police and is being issued
+                    to all the traffic defaulters in India. The Government of India has initiated this process to make
+                    the traffic services convenient, easy as well as transparent to the general public.
+                    Also, with e- challan system effective and strong monitoring of the traffic violators becomes easy for
+                    the traffic police. In the age of digitalization, traffic defaulters will be able to now pay e-challan
+                    either online or offline, depending on the facility given by their city or state. E- challan system
+                    has been introduced to avoid cash transactions so that everything is very clear and transparent.
+                    The government of India has also introduced Traffic eChallan, which is an application and is
+                    combined with web portal applications which are namely Vahan and Sarathi.
+                    These two applications offer many benefits and features which cover all the
+                    main aspects of the Administration System. The traffic e challan can be paid both online
+                    as well as by the traffic violators.
+                </p>
             </div>
-          </div>
         </div>
-        <!--Navigation bar Menu section-->
-        <div class="nav-menu-section">
-          <ul>
-            <li>
-              <a class="menu-items" href="../index.html">Home</a>
-            </li>
-            <li>
-              <a class="menu-items" href="TrafficChallan.html">Challan</a>
-            </li>
-            <li>
-              <a class="menu-items" href="UserLogin.html">Payment</a>
-            </li>
-            <li>
-              <a class="menu-items" href="News.html">News</a>
-            </li>
-            <li>
-              <a class="menu-items" href="#">About</a>
-            </li>
-            <li>
-              <a class="menu-items" href="Contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <!--End of Navigation Bar-->
+    </main>
+    <!--End of About Us Page  -->
 
-  
+    <!--Footer Section-->
+    <footer>
+        <div class="footer-container">
+            <h5 class="footer-heading">
+                Get to Know Us More
+            </h5>
+            <div class="row-social-icons">
+                <ul>
+                    <li title=Facebook>
+                        <a href="#" target=_blank title=Facebook rel="noopener noreferrer">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li title=Dribbble>
+                        <a href="#" target=_blank title=Dribbble rel="noopener noreferrer">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </li>
+                    <li title=GitHub>
+                        <a href="#" target=_blank title=Github rel="noopener noreferrer">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                    <li title=Behance>
+                        <a href="#" target=_blank title=Behance rel="noopener noreferrer">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </li>
+                    <li title=Twitter>
+                        <a href="#" target=_blank title=Twitter rel="noopener noreferrer">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-  <!--Footer Section-->
-  <footer>
-    <div class="footer-container">
-      <h5 class="footer-heading">
-        Get to Know Us More
-      </h5>
-      <div class="row-social-icons">
-        <ul>
-          <li title=Facebook>
-            <a href="#" target=_blank title=Facebook rel="noopener noreferrer">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li title=Dribbble>
-            <a href="#" target=_blank title=Dribbble rel="noopener noreferrer">
-              <i class="fa fa-dribbble"></i>
-            </a>
-          </li>
-          <li title=GitHub>
-            <a href="#" target=_blank title=Github rel="noopener noreferrer">
-              <i class="fa fa-github"></i>
-            </a>
-          </li>
-          <li title=Behance>
-            <a href="#" target=_blank title=Behance rel="noopener noreferrer">
-              <i class="fa fa-behance"></i>
-            </a>
-          </li>
-          <li title=Twitter>
-            <a href="#" target=_blank title=Twitter rel="noopener noreferrer">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-menu-container">
-        <div class="footer-menu">
-          <h1>Traffic Police</h1>
-          <h2>Contact Us</h2>
-          <h2>About Us</h2>
-          <h2>News</h2>
-          <h2>Privacy Policy</h2>
+            <div class="footer-menu-container">
+                <div class="footer-menu">
+                    <h1>Traffic Police</h1>
+                    <h2>Contact Us</h2>
+                    <h2>About Us</h2>
+                    <h2>News</h2>
+                    <h2>Privacy Policy</h2>
+                </div>
+                <div class="footer-menu">
+                    <h1>Information</h1>
+                    <h2>Advice</h2>
+                    <h2>Crime Prevention</h2>
+                    <h2>Challan</h2>
+                    <h2>Payment</h2>
+                </div>
+                <div class="footer-menu">
+                    <h1>Partners</h1>
+                    <h2>Police Sathi</h2>
+                    <h2>Nepal Government</h2>
+                    <h2>Herald Kathmandu</h2>
+                </div>
+            </div>
         </div>
-        <div class="footer-menu">
-          <h1>Information</h1>
-          <h2>Advice</h2>
-          <h2>Crime Prevention</h2>
-          <h2>Challan</h2>
-          <h2>Payment</h2>
+        <div class="row-copyright ">
+            <p>Copyright © 2021 E-Challan System - All right reserved</p>
         </div>
-        <div class="footer-menu">
-          <h1>Partners</h1>
-          <h2>Police Sathi</h2>
-          <h2>Nepal Government</h2>
-          <h2>Herald Kathmandu</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row-copyright ">
-      <p>Copyright © 2021 E-Challan System - All right reserved</p>
-    </div>
-  </footer>
-  <!--End of Footer Section-->
+    </footer>
+    <!--End of Footer Section-->
 </body>
 </html>
