@@ -4,8 +4,8 @@
       "fullName": "James Bahadur",
       "address": "Kathmandu",
       "licenceNo": "12345",
-      "vahicleCat": "Category B",
-      "vahicleNum": "CH 12 B 420",
+      "vehicleCat": "Category B",
+      "vehicleNum": "CH 12 B 420",
       "createdBy": "Jung Bahadur",
       "challanDate": "2021-09-17",
       "guilty": "Drink and Drive",
@@ -15,7 +15,7 @@
   ],
   "TrafficUsers": [
     {
-      "username": "John Kaji",
+      "username": "johnkaji",
       "phone": "9876543210",
       "address": "Kathmandu, Nepal",
       "email": "kaji@email.np",
