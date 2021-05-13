@@ -319,6 +319,11 @@ header {
   }
   /*End of News Section*/
 
+  
+  body{
+    background-color: #000535;
+  }
+
 
   .from-box{
     width: 380px;
