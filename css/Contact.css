@@ -1,0 +1,78 @@
+/* css for contact us page */
+body{
+    background-color: #000535;
+}
+.contact-form-title{
+    font-family: freight-big-pro;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    padding-bottom: 35px;
+    margin-top: 30px;
+    color: white;
+}
+
+.contact-form{
+    margin: 30px  auto; /* t r b l*/
+    width: 600px;
+    padding: 25px;
+}
+
+.contact-form-fields{
+    width: calc(100% - 24px);   
+    padding: 4px 10px; 
+    font-size: 17px; 
+}
+
+.contact-form div{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-form label{
+    color: white;
+    font-size: 20px; 
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.contact-form select{
+    width: 100%;
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    vertical-align: top;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 4px 10px;
+}
+.contact-form button , input , textarea{
+    font-family: Georgia,Times New Roman,serif;
+}
+
+.contact-form button[type="submit"]{
+    background-color: #DC143C;
+    border: 1px solid #DC143C;
+    justify-content: center;
+    white-space: nowrap;
+    box-shadow: none;
+    font-size: 16px;
+    position: relative;
+    line-height: 1.5;
+    display: inline-flex;
+    padding: 5px 15px 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.contact-form button:hover{
+    border: 2px solid rgb(5, 2, 2);
+}
+.contact-form div{
+    margin-bottom: 30px;
+}
+.contact-form textarea{
+    display: block;
+    resize: vertical;
+    max-height: 640px;
+    min-height: 128px;
+}
