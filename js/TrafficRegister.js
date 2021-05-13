@@ -52,7 +52,7 @@ if(register != null){
         let pass = document.querySelector('#passwordT').value;
 
         let register = new TrafficRegister(uname, phone, address, email, pass);
-        register.trafficRegister();
+        register.trafficRegister(); //calling method from trafficRegister class
 
         e.target.reset();
     });
