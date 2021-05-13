@@ -353,7 +353,7 @@ header {
     position: absolute;
     width: 110px;
     height: 100%;
-    background: linear-gradient(to right, #003893,#dc143c);
+    background: red;
     border-radius: 30px;
     transition: .5s;
 }
@@ -383,7 +383,7 @@ header {
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, #003893,#dc143c);
+    background: red;
     color: white;
     border: 0;
     outline: none;
