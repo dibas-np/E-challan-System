@@ -50,7 +50,6 @@ class TrafficRegister extends TrafficUsers{
 }
 
 let register = document.querySelector("#traffReg");
-
 if(register != null){
     register.addEventListener('submit', e => {
         e.preventDefault();
@@ -62,8 +61,7 @@ if(register != null){
 
         let register = new TrafficRegister(uname, phone, address, email, pass);
         register.trafficRegister(); //calling method from trafficRegister class
-
-        e.target.reset();
+        e.target.reset(); //reset form
     });
 }
 
@@ -76,12 +74,14 @@ class TrafficLogin extends TrafficUsers{
   
     //method to login to challan
     trafficLogin(){
+      // get value from json server
       axios.get('http://localhost:3000/TrafficUsers')
       .then(res => {
+        // to check if username and password match from data value
         let currentUsers = res.data.filter(item=>{
           return (item.username == this.username && item.password == this.password);
         });
-        return this.checkLoginDetails(currentUsers);
+        return this.checkLoginDetails(currentUsers); //returns boolean value 
       })
       .then(r =>{
           if(r == true){
@@ -104,14 +104,14 @@ class TrafficLogin extends TrafficUsers{
   //constant variable for login form
   const login = document.querySelector('#traffLog');
   if(login != null){
+    // On clicking login button 
     login.addEventListener('submit', e => {
       e.preventDefault();
-      let uname = document.querySelector('#user').value;
-      let pass = document.querySelector('#pass').value;
+      let uname = document.querySelector('#user').value; //get username value
+      let pass = document.querySelector('#pass').value; //get password value
   
-      let trafficLogin = new TrafficLogin(uname, pass);
+      let trafficLogin = new TrafficLogin(uname, pass); //class TrafficLogin()
       trafficLogin.trafficLogin();
-  
     })
   }
 

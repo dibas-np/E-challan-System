@@ -11,18 +11,6 @@
       "guilty": "Drink and Drive",
       "fineAmount": "1000",
       "id": 1
-    },
-    {
-      "fullName": "",
-      "address": "",
-      "licenceNo": "",
-      "vehicleCat": "A",
-      "vehicleNum": "",
-      "createdBy": "",
-      "challanDate": "",
-      "guilty": "",
-      "fineAmount": "",
-      "id": 2
     }
   ],
   "TrafficUsers": [
