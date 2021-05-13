@@ -113,6 +113,11 @@ header {
   text-shadow: 1px #000535;
 }
 
+.site-header::after{
+  content: "";
+  clear: both;
+  display: table;
+}
 /*End of Top logo section*/
 
 /*Navigation bar Menu Secition*/
@@ -383,13 +388,18 @@ p5 {
   font-weight: 540;
 }
 
+.news-section::after{
+  content: "";
+  clear: both;
+  display: table;
+
+}
 /*End of News Section*/
 
 /*Footer*/
 .footer-container {
   background-color: #030730;
-  height: 500px;
-  padding: 50px 100px 20px 100px;
+ padding: 100px 20px;
 }
 
 .footer-heading {
@@ -405,73 +415,49 @@ p5 {
   color: #fff;
 }
 
-.row-social-icons {
-  padding-right: 200px;
-  margin-top: 30px;
-  margin-bottom: 40px;
+.footer-container {
+  display: block;
 }
 
 .row-social-icons ul li a {
   color: #fff;
 }
 
-.footer-menu {
-  float: left;
-  width: 33.33%;
+.row-social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin-right: 200px;
 }
 
-/* Clear floats after the columns */
-.footer-menu-container:after {
-  content: "";
-  display: table;
-  clear: both;
+.footer-menu-container{
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
 }
-
 .footer-menu h1 {
   font-size: 30px;
-  line-height: 34px;
   padding-bottom: 20px;
 }
 
 .footer-menu h2 {
   font-size: 25px;
   font-weight: 500;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 .row-copyright {
   text-align: center;
-  height: 100px;
-  background-color: #030730;
+  background-color: #00010a;
+  padding: 30px;
 }
 
 .row-copyright p {
-  padding-top: 40px;
-  display: block;
+  font-size: 20px;
 }
 
 /*End of Footer*/
-
-/*Responsive*/
-@media screen and (max-width: 937px){
-  .footer-menu h1 {
-    font-size: 25px;
-    line-height: 30px;
-    padding-bottom: 20px;
-  }
-  
-  .footer-menu h2 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 35px;
-  }
-}
-
-@media screen and (max-width: 937px){
- .row-social-icons{
-   margin-right: 150px;
- }
-}
+/* Responsive CSS for header */
 
 @media screen and (max-width: 800px){
   .nav-menu-section{
@@ -485,26 +471,6 @@ p5 {
   }
 }
 
-@media screen and (max-width: 728px){
-  .footer-container h5{
-    font-size: 30px;
-  }
-  .footer-container {
-    height: 400px;
-    padding: 50px 50px 20px 50px;
-  }
-  .footer-menu h1 {
-    font-size: 20px;
-    line-height: 25px;
-    padding-bottom: 15px;
-  }
-  
-  .footer-menu h2 {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 30px;
-  }
-}
 @media screen and (max-width: 680px){
   .searchTerm{
     visibility: hidden;
@@ -520,45 +486,12 @@ p5 {
   }
 }
 
-@media screen and (max-width: 520px){
-  .footer-container {
-    height: 300px;
-    padding: 50px 50px 20px 50px;
-  }
-  .footer-menu h1 {
-    font-size: 15px;
-    line-height: 20px;
-    padding-bottom: 10px;
-  }
-  
-  .footer-menu h2 {
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 20px;
-  }
-}
-
-@media screen and (max-width: 503px){
-  .footer-container {
-    height: 0px;
-    visibility: hidden;
-  }
-  .row-copyright{
-    height: 40px;
-    background-color: #000535;
-  }
-  .row-copyright p{
-    padding: 10px;
-    display: inline;
-    float: left;
-  }
-}
-
 @media screen and (max-width: 490px){
   .nav-menu-section{
     height: 30px;
   }
   ul li{
+    padding-top: 12px;
     margin: 3px;
   }
   ul li a{
@@ -567,5 +500,54 @@ p5 {
   }
   .searchButton{
     visibility: hidden;
+  }
+}
+
+
+/*Responsive CSS for Footer*/
+@media screen and (max-width: 800px){
+  .footer-menu-container{
+    padding: 10px;
+  }
+  .footer-menu h1 {
+    font-size: 24px;
+  }
+  .row-social-icons {
+    margin-right: 350px;
+  }
+  .footer-menu h2 {
+    font-size: 20px;
+  }
+  .footer-heading {
+    font-size: 36px;
+  }
+  .row-social-icons i {
+    font-size: 16px;
+  }
+  .row-social-icons ul li {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .footer-menu-container{
+    flex-wrap: wrap;
+    padding: 40px;
+  }
+  .footer-heading {
+    font-size: 26px;
+  }
+  .footer-menu h1 {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .footer-container li{
+    margin-left: -90px;
+  }
+  .row-copyright {
+    margin-top: -50px;
   }
 }

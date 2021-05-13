@@ -105,17 +105,32 @@
 
 @media screen and (max-width: 700px){ /*  Applied When screen size is smaller than 700px */
   .section-login{
+    padding-top: 50px;
     flex-direction: column-reverse; /* to keep register details at top */
   }
   .main-register{
     padding: auto;
   }
   .main-register p{
-    padding-top: 20px;
+    padding-top: 10px;
+    font-size: 18px;
   }
   .main-login{
     padding: auto;
     border-radius: 0; /* back to default border radius*/
+  }
+  .main-register button, #loginSubmitt{
+    font-size: 16px;
+  }
+  .main-login input{
+    font-size: 16px;
+  }
+  .main-login label{
+    font-size: 16px;
+    padding: 5px;
+  }
+  .main-login h1{
+    font-size: 24px;
   }
 }
 /* End of code */
