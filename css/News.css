@@ -1,9 +1,14 @@
-/* CSS for Collections Page  */
+/* CSS for News Page  */
 .news{
     max-width: 100%;
+    margin-top: 30px;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: #000535;
+    color: white;
 }
 .news-title{
-    font-family: freight-big-pro;
     font-weight: 500;
     font-style: normal;
     font-size: 30px;
@@ -26,7 +31,6 @@
     transition: 0.8s;
 }
 .news-row{
-    /* width: 22%; */
     padding: 0 10px;
     display: block;
     margin-left: 23%;
@@ -34,7 +38,6 @@
     margin-right: 23%;
 }
 .news-caption h1{
-    font-family: freight-big-pro;
     font-size: 25px;
     line-height: 34px;
     font-weight: 700;
@@ -52,10 +55,9 @@
 .news-caption p1{
     font-size: 16px;
     line-height: 24px;
-    color: #333;
+    color:white;
     padding-top: 16px;
     padding-bottom: 8px;
-    font-family: Georgia,Times New Roman,serif;
     font-weight: 400;
     font-style: normal;
     justify-content: center;
@@ -79,7 +81,7 @@
 .news-nav a{
     border: 1px solid #e4dada;
     border-radius: 4px;
-    color: #3a3653;
+    color:white;
     margin: 3px;
    
 }
