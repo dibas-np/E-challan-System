@@ -114,6 +114,10 @@ class TrafficLogin extends TrafficUsers{
       trafficLogin.trafficLogin();
     })
   }
+// End of code
+
+
+
 
 // // Window event load on Challan Page
 // window.addEventListener('load', e =>{
@@ -122,5 +126,3 @@ class TrafficLogin extends TrafficUsers{
 //         window.location = "../html/TrafficLogin.html"; 
 //     }
 // })
-
-// End of code
