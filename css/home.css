@@ -113,6 +113,7 @@ header {
   text-shadow: 1px #000535;
 }
 
+/* Adding clearfix to clear after this section */
 .site-header::after{
   content: "";
   clear: both;

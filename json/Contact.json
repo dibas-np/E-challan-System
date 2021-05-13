@@ -4,36 +4,8 @@
       "name": "Hello",
       "email": "hello@gmail.com",
       "subject": "reporting",
-      "message": "LOL LOL LOL",
+      "message": "Lets make good code",
       "id": 1
-    },
-    {
-      "name": "Ramesh",
-      "email": "Ramesh@gmail.com",
-      "subject": "help",
-      "message": "HELLO HELLo",
-      "id": 2
-    },
-    {
-      "name": "dibas sigdel",
-      "email": "wefewf@gmail.com",
-      "subject": "help",
-      "message": "aaa",
-      "id": 3
-    },
-    {
-      "name": "dibas sigdel",
-      "email": "wefewf@gmail.com",
-      "subject": "help",
-      "message": "aaa",
-      "id": 4
-    },
-    {
-      "name": "dibas sigdel",
-      "email": "wefewf@gmail.com",
-      "subject": "help",
-      "message": "sss",
-      "id": 5
     }
   ]
 }
