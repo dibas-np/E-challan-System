@@ -1,6 +1,7 @@
 // Start of code
 // Class for Traffic Users data
 class TrafficUsers{
+  // constructor 
     constructor(uname, pass){
         this.username = uname;
         this.password = pass;
@@ -31,6 +32,7 @@ class TrafficUsers{
 
 //class for Refistration
 class TrafficRegister extends TrafficUsers{
+  // constructor 
   constructor(uname, phone, address, email, pass){
     super(uname, pass);
     this.phoneNum = phone;
@@ -40,26 +42,26 @@ class TrafficRegister extends TrafficUsers{
   
     //method to register to challan
     trafficRegister(){
-      // get value from json server
+      // get value from TrafficUsers json server through locolhost 3000
       axios.get('http://localhost:3000/TrafficUsers')
       .then(res => {
-        // to check if username and password match from data value
+        // to check if username and phone and email match from data value
         let currentUsers = res.data.filter(item=>{
-          return (item.username == this.username && item.phone == this.phoneNum);
+          return (item.username == this.username || item.phone == this.phoneNum || item.email == this.emails);
         });
-        return this.checkLoginDetails(currentUsers); //returns boolean value 
+        return this.checkLoginDetails(currentUsers); //returns boolean value true/false
       })
       .then(r =>{
           if(r == true){
             swal.fire({ //swal is SweetAlert in JavaScript
-                icon: 'error', //success icon for display message
-                title: 'Login failed', //title of pop-up message
+                icon: 'error', //error icon for display message
+                title: 'Traffic Registration Failed', //title of pop-up message
                 text: 'Username, email or phone number you are trying to enter is already registered. Please try again with different value.' //description
               })
           }else{
             swal.fire({ //swal is SweetAlert in JavaScript
                 icon: 'success', //success icon for display message
-                title: 'Registraion Success' //title of pop-up message
+                title: 'Traffic Registraion Success' //title of pop-up message
             })
             const data = this.makeTrafficData(); //get data from makeTrafficData
             axios.post('http://localhost:3000/TrafficUsers', data)
@@ -98,7 +100,7 @@ class TrafficLogin extends TrafficUsers{
   
     //method to login to challan
     trafficLogin(){
-      // get value from json server
+      // get value from json server through locolhost 3000
       axios.get('http://localhost:3000/TrafficUsers')
       .then(res => {
         // to check if username and password match from data value
@@ -116,7 +118,7 @@ class TrafficLogin extends TrafficUsers{
             window.location = "../html/TrafficChallan.html";
           }else{
             swal.fire({ //swal is SweetAlert in JavaScript
-                icon: 'error', //success icon for display message
+                icon: 'error', //icon for display message
                 title: 'Login Failed', //title of pop-up message
                 text: 'Username of password did not match! Please try again with correct username and password.' //description
               })
