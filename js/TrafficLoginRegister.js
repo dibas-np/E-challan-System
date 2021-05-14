@@ -31,39 +31,63 @@ class TrafficUsers{
 
 //class for Refistration
 class TrafficRegister extends TrafficUsers{
-    // Constructor
-    constructor(uname, phone, address, email, pass){
-        super(uname, pass);
-        this.phoneNum = phone;
-        this.add = address;
-        this.emails = email;
-    }
-
-    // Method to register
+  constructor(uname, phone, address, email, pass){
+    super(uname, pass);
+    this.phoneNum = phone;
+    this.add = address;
+    this.emails = email;
+}
+  
+    //method to register to challan
     trafficRegister(){
-        const data = this.makeTrafficData(); //get data from makeTrafficData
-        axios.post('http://localhost:3000/TrafficUsers', data)
-        .then(res => {
-            console.log("Regisration success");
-        }).catch(e => console.log(e));
+      // get value from json server
+      axios.get('http://localhost:3000/TrafficUsers')
+      .then(res => {
+        // to check if username and password match from data value
+        let currentUsers = res.data.filter(item=>{
+          return (item.username == this.username && item.phone == this.phoneNum);
+        });
+        return this.checkLoginDetails(currentUsers); //returns boolean value 
+      })
+      .then(r =>{
+          if(r == true){
+            swal.fire({ //swal is SweetAlert in JavaScript
+                icon: 'error', //success icon for display message
+                title: 'Login failed', //title of pop-up message
+                text: 'Username, email or phone number you are trying to enter is already registered. Please try again with different value.' //description
+              })
+          }else{
+            swal.fire({ //swal is SweetAlert in JavaScript
+                icon: 'success', //success icon for display message
+                title: 'Registraion Success' //title of pop-up message
+            })
+            const data = this.makeTrafficData(); //get data from makeTrafficData
+            axios.post('http://localhost:3000/TrafficUsers', data)
+            .then(res => {
+                console.log("Regisration success");
+            }).catch(e => console.log(e));
+
+          }
+      }).catch (e => console.log(e));
     }
-}
-
-let register = document.querySelector("#traffReg");
-if(register != null){
+  }
+  
+  //constant variable for register form
+  const register = document.querySelector('#traffReg');
+  if(register != null){
+    // On clicking register button 
     register.addEventListener('submit', e => {
-        e.preventDefault();
-        let uname = document.querySelector('#unameT').value;
-        let phone = document.querySelector('#phoneT').value;
-        let address = document.querySelector('#addressT').value;
-        let email = document.querySelector('#emailT').value;
-        let pass = document.querySelector('#passwordT').value;
-
-        let register = new TrafficRegister(uname, phone, address, email, pass);
-        register.trafficRegister(); //calling method from trafficRegister class
-        e.target.reset(); //reset form
-    });
-}
+      e.preventDefault();
+      let uname = document.querySelector('#unameT').value;
+      let phone = document.querySelector('#phoneT').value;
+      let address = document.querySelector('#addressT').value;
+      let email = document.querySelector('#emailT').value;
+      let pass = document.querySelector('#passwordT').value;
+  
+      let trafficRegister = new TrafficRegister(uname, phone, address, email, pass); //class TrafficRegister()
+      trafficRegister.trafficRegister();
+    })
+  }
 
 
 //Traffic Login class
@@ -115,14 +139,3 @@ class TrafficLogin extends TrafficUsers{
     })
   }
 // End of code
-
-
-
-
-// // Window event load on Challan Page
-// window.addEventListener('load', e =>{
-//     if(localStorage.isLogin == null || localStorage.isLogin == 'false'){
-//         //goes to login page if no login attempt is done
-//         window.location = "../html/TrafficLogin.html"; 
-//     }
-// })

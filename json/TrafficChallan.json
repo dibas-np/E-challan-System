@@ -21,6 +21,22 @@
       "email": "kaji@email.np",
       "password": "pass",
       "id": 1
+    },
+    {
+      "username": "asdas",
+      "phone": "12",
+      "address": "KTM",
+      "email": "rabinsraizee@gmail.com",
+      "password": "asd",
+      "id": 2
+    },
+    {
+      "username": "dsfsdfsa",
+      "phone": "32132",
+      "address": "KTM",
+      "email": "rabidsraizee@gmail.com",
+      "password": "ads",
+      "id": 3
     }
   ]
 }
