@@ -12,7 +12,6 @@ class TrafficChallanDetails{ //Class TrafficChallanDetails
         this.guilty = guilty;
         this.fineAmount = fineAmount;
       }
-    
       //Method to make data of challan ready through this variables
       makeDataChallan(){
         let dataTrafficChallan = {
@@ -26,10 +25,10 @@ class TrafficChallanDetails{ //Class TrafficChallanDetails
           guilty : this.guilty,
           fineAmount : this.fineAmount
         };
-    
         //returns all values as dataTrafficChallan
         return dataTrafficChallan;
       }
+
       //Method : Functions to post user input data in JSON Server
       trafficChallanDetail(){
         const data = this.makeDataChallan(); 
@@ -84,7 +83,6 @@ function myPrint() {
   let guilty = document.querySelector('#problem').value;
   let fineAmount = document.querySelector('#amount').value;
 
-  
   let trafficChallanDetail = new TrafficChallanDetails(fullName, address, licenceNo, vehicleCat, vehicleNum, createdBy, challanDate, guilty, fineAmount);
   
   // use of html in sweet alert to print the challan details in pop up window
@@ -106,6 +104,7 @@ function myPrint() {
     focusConfirm: false,
     confirmButtonText: "Print Now",
     cancelButtonText: "Print Later",
+    
   }).then((result) => {
     if (result.isConfirmed) { //Checks if the user clicks Print Now
       swal.fire({ //swal is SweetAlert in JavaScript

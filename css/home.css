@@ -463,8 +463,8 @@ p5 {
 }
 
 /*End of Footer*/
-/* Responsive CSS for header */
 
+/* Responsive CSS for header */
 @media screen and (max-width: 800px){
   .nav-menu-section{
     height: 50px;
@@ -494,7 +494,6 @@ p5 {
     font-size: 15px;
   }
 }
-
 @media screen and (max-width: 490px){
   .nav-menu-section{
     height: 30px;

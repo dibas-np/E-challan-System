@@ -28,7 +28,7 @@ class TrafficUsers{
     }
 }
 
-//class for Refistration
+//class for Registration
 class TrafficRegister extends TrafficUsers{
   // constructor 
   constructor(uname, phone, address, email, pass){
@@ -37,7 +37,6 @@ class TrafficRegister extends TrafficUsers{
     this.add = address;
     this.emails = email;
   }
-  
     //method to register to challan
     trafficRegister(){
       // get value from TrafficUsers json server through locolhost 3000
