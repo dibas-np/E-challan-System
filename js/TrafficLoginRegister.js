@@ -6,7 +6,6 @@ class TrafficUsers{
         this.username = uname;
         this.password = pass;
     }
-
     //make data function
     makeTrafficData(){
         // store data in new variable
@@ -19,7 +18,6 @@ class TrafficUsers{
         }
         return data;//returns data stored in var data
     }
-
     // to check if login is success
     checkLoginDetails(args){
         if(args.length > 0){
@@ -38,7 +36,7 @@ class TrafficRegister extends TrafficUsers{
     this.phoneNum = phone;
     this.add = address;
     this.emails = email;
-}
+  }
   
     //method to register to challan
     trafficRegister(){
@@ -97,7 +95,6 @@ class TrafficLogin extends TrafficUsers{
     constructor(uname, pass){
       super(uname, pass);
     }
-  
     //method to login to challan
     trafficLogin(){
       // get value from json server through locolhost 3000
