@@ -82,9 +82,14 @@ header {
   background: #fff;
   text-align: center;
   color: #000535;
-  border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 24px;
+}
+.search-container{
+  border-radius: 5px 5px 5px 5px;
+}
+.searchButton{
+  border-radius: 5px;
 }
 
 .dropdown-content {
