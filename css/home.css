@@ -89,7 +89,7 @@ header {
   border-radius: 5px 5px 5px 5px;
 }
 .searchButton{
-  border-radius: 5px;
+  border-radius: 0 5px 0 0;
 }
 
 .dropdown-content {
@@ -480,6 +480,9 @@ p5 {
 @media screen and (max-width: 680px){
   .searchTerm{
     visibility: hidden;
+  }
+  .searchButton{
+    border-radius: 5px;
   }
 }
 
