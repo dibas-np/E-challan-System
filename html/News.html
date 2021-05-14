@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="../images/header_icon.png" type="ico" sizes="16x16">
   <link rel="stylesheet" type="text/css" href="../css/home.css" />
-  <link rel="stylesheet" type="text/css" href="../css/AdminLogin.css" />
-  <title>Admin Login</title>
+  <link rel="stylesheet" type="text/css" href="../css/News.css" />
+  <title>News</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="https://kit.fontawesome.com/9d93f40cf0.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
@@ -39,7 +39,7 @@
               <i class="far fa-user"></i>
             </button>
             <div class="dropdown-content">
-              <a href="#">Admin</a><br>
+              <a href="AdminLogin.html">Admin</a><br>
               <a href="TrafficLogin.html">Traffic</a><br>
               <a href="UserLogin.html">User</a><br>
             </div>
@@ -52,13 +52,13 @@
               <a class="menu-items" href="../index.html">Home</a>
             </li>
             <li>
-              <a class="menu-items" href="TrafficChallan.html">Challan</a>
+              <a class="menu-items" href="TrafficLogin.html">Challan</a>
             </li>
             <li>
               <a class="menu-items" href="UserLogin.html">Payment</a>
             </li>
             <li>
-              <a class="menu-items" href="News.html">News</a>
+              <a class="menu-items" href="#">News</a>
             </li>
             <li>
               <a class="menu-items" href="About.html">About</a>
@@ -73,29 +73,82 @@
   </header>
   <!--End of Navigation Bar-->
 
-  <!--Admin Login Section-->
-  <div class="login-box">
-    <h2>Login</h2>
-    <form id="login-form">
-      <div class="user-box">
-        <input id="username" type="text" name="" required="">
-        <label>Username</label>
-      </div>
-      <div class="user-box">
-        <input id="password" type="password" name="" required="">
-        <label>Password</label>
-      </div>
-      <a onclick="logIn()" href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-    </form>
-  </div>
-  <!--End of Admin Login Section-->
-  
+  <!--Start of News Section-->
+  <section class="news">
+    <div class="container">
+        <div class="news-title">
+            <h1>Latest News</h1>
+        </div>
+
+        <div class="news-row">
+            <figure class="news-image">
+                <img src="../images/news_section_image_1.webp" alt="placeholder">
+            </figure>
+            <figcaption class="news-caption">
+                <h1>Protestor protesting for Positive Change</h1>
+                <p>Brian Tallerico &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>In the downtown protestors are protesting for the change in the society.</p1>
+            </figcaption>
+        </div>
+
+        <div class="news-row">
+            <figure class="news-image">
+                <img src="../images/newsimage3.jpg" alt="placeholder">
+            </figure>
+            <figcaption class="news-caption">
+                <h1>Woman and child were evacuated</h1>
+                <p>Ramesh Karki &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>This woman and child were evacuated from a building in Gaza</p1>
+            </figcaption>
+        </div>
+
+        <div class="news-row">
+            <figure class="news-image">
+                <img src="../images/newsimage4.jpg" alt="placeholder">
+            </figure>
+            <figcaption class="news-caption">
+                <h1>Tourism in Nepal</h1>
+                <p>Brian Tallerico &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>Popular tourist spots in the Pokhara.</p1>
+            </figcaption>
+        </div>
+
+        <div class="news-row">
+            <figure class="news-image">
+                <img src="../images/newsimage.jpg" alt="placeholder">
+            </figure>
+            <figcaption class="news-caption">
+                <h1>Fire in the City</h1>
+                <p>Ramesh Sharma &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>There was the huge fire in the Kathmandu.</p1>
+            </figcaption>
+        </div>
+
+        <div class="news-row">
+            <figure class="news-image">
+                <img src="../images/newsimage2.jpg" alt="placeholder">
+            </figure>
+            <figcaption class="news-caption">
+                <h1>Taxi Driver Gets in Fight</h1>
+                <p>Kamlesh Prasad &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>Driver got into the fight with the passenger.</p1>
+            </figcaption>
+        </div>
+
+        <div class="news-row">
+            <figure class="news-image">
+                <img src="../images/news3.jpg" alt="placeholder">
+            </figure>
+            <figcaption class="news-caption">
+                <h1>Covid hits big</h1>
+                <p>The Editors &nbsp;|&nbsp; 2021-05-11</p>
+                <p1>Covid has been increasing day by day.</p1>
+            </figcaption>
+        </div>
+    </div>
+</section>
+  <!--End of News Section-->
+
   <!--Footer Section-->
   <footer>
     <div class="footer-container">
@@ -131,7 +184,7 @@
           </li>
         </ul>
       </div>
-  
+
       <div class="footer-menu-container">
         <div class="footer-menu">
           <h1>Traffic Police</h1>
@@ -160,8 +213,5 @@
     </div>
   </footer>
   <!--End of Footer Section-->
-  
-  <script src="../js/AdminLogin.js"></script>
 </body>
-
 </html>

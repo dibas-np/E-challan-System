@@ -43,29 +43,16 @@ function onFormSubmit() {
                     insertNewRecord(formData);
                     addDataToJson(formData);
                     Swal.fire('Challan created!', '', 'success')
+                    resetForm();
                 } else if (result.isDenied) {
                     Swal.fire('Challan wasn\'t created!', '', 'info')
                 }
             })
         } else{
-            Swal.fire({
-                title: 'Do you want to update challan?',
-                showDenyButton: true,
-                showCancelButton: true,
-                confirmButtonText: `Update`,
-                denyButtonText: `Don't update`,
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    updateRecord(formData);
-                    Swal.fire('Challan updated!', '', 'success')
-                } else if (result.isDenied) {
-                    Swal.fire('Challan wasn\'t updated!', '', 'info')
-                }
-            })
-        }
-        resetForm();
+            updateRecord(formData);
+            resetForm();
+        } 
     }
-   
 }
 
 /**
@@ -196,7 +183,7 @@ function deleteDataFromJson(id) {
         .then(data => {
            console.log(data[id-1].id);
            toDelete=data[id-1].id;
-           console.log("To Delete"+toDelete);
+           console.log("Deleted from JSON");
            deleteLink = 'http://localhost:3000/ChallanDetails/'+toDelete;
            axios.delete(deleteLink);
         })
@@ -264,7 +251,6 @@ function updateRecord(formData) {
             updateDataToJson(formData);
             deleteDataFromJson(selectedRowIndex);
             Swal.fire('Updated!', '', 'success');
-            window.location.reload();
         } else if (result.isDenied) {
             Swal.fire('Challan isn\'t updated!', '', 'info')
         }

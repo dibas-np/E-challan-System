@@ -7,11 +7,11 @@
         <title>Login and Register Page</title>
         <link rel="stylesheet" href="../css/UserLogin.css">
         <link rel="icon" href="../images/header_icon.png" type="ico" sizes="16x16">
-        <link rel="stylesheet" type="text/css" href="../css/home.css" />
+        <link rel="stylesheet" href="../css/home.css">
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
+        >
         <script
           src="https://kit.fontawesome.com/9d93f40cf0.js"
           crossorigin="anonymous"
@@ -19,15 +19,38 @@
     </head>
 
     <body>
-        <!-- Navigation Bar -->
+      <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
     <header class="site-header">
-        <div class="header-container">
+      <div class="header-container">
           <nav class="main-nav">
-            <!--Navigation bar top logo and search bar section-->
-            <div class="top-logo-section">
-              <div class="logo">
-                <img src="../images/logo.png" alt="Logo" width="206" height="86" />
+              <!--Navigation bar top logo and search bar section-->
+              <div class="top-logo-section">
+                  <div class="logo">
+                      <a href="../index.html">
+                          <img src="../images/logo.png" alt="Logo" width="206" height="86" />
+                      </a>
+                  </div>
+                  <div class="search-container">
+                      <div class="search">
+                          <input type="text" class="searchTerm" placeholder="What are you looking for?" />
+                          <button type="submit" class="searchButton">
+                              <i class="fa fa-search"></i>
+                          </button>
+                      </div>
+                  </div>
+                  <div class="user-home">
+                      <button style="font-size: 30px" type="submit" class="userButtonNav">
+                          <i class="far fa-user"></i>
+                      </button>
+                      <div class="dropdown-content">
+                          <a href="AdminLogin.html">Admin</a><br>
+                          <a href="TrafficLogin.html">Traffic</a><br>
+                          <a href="UserLogin.html">User</a><br>
+                      </div>
+                  </div>
               </div>
+<<<<<<< HEAD
               <div class="search-container">
                 <div class="search">
                   <input
@@ -49,34 +72,35 @@
                   <a href="TrafficLogin.html">Traffic</a><br>
                   <a href="UserLogin.html">User</a><br>
                 </div>
+=======
+              <!--Navigation bar Menu section-->
+              <div class="nav-menu-section">
+                  <ul>
+                      <li>
+                          <a class="menu-items" href="../index.html">Home</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="TrafficChallan.html">Challan</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="UserLogin.html">Payment</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="News.html">News</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="About.html">About</a>
+                      </li>
+                      <li>
+                          <a class="menu-items" href="Contact.html">Contact</a>
+                      </li>
+                  </ul>
+>>>>>>> 8ab45d04aff1b4b540fcb3ed4226af4db1824190
               </div>
-            </div>
-            <!--Navigation bar Menu section-->
-            <div class="nav-menu-section">
-              <ul>
-                <li>
-                  <a class="menu-items" href="../index.html">Home</a>
-                </li>
-                <li>
-                  <a class="menu-items" href="TrafficLogin.html">Challan</a>
-                </li>
-                <li>
-                  <a class="menu-items" href="UserLogin.html">Payment</a>
-                </li>
-                <li>
-                  <a class="menu-items" href="#">News</a>
-                </li>
-                <li>
-                  <a class="menu-items" href="#">About Us</a>
-                </li>
-                <li>
-                  <a class="menu-items" href="#">Contact Us</a>
-                </li>
-              </ul>
-            </div>
           </nav>
-        </div>
-      </header>
+      </div>
+  </header>
+  <!--End of Navigation Bar-->
 
         <div class="hero">
             <div class="from-box">
@@ -125,7 +149,8 @@
 
         </script>
 
-<footer>
+ <!--Footer Section-->
+  <footer>
     <div class="footer-container">
       <h5 class="footer-heading">
         Get to Know Us More
@@ -158,35 +183,36 @@
             </a>
           </li>
         </ul>
+      </div>
+
+      <div class="footer-menu-container">
+        <div class="footer-menu">
+          <h1>Traffic Police</h1>
+          <h2>Contact Us</h2>
+          <h2>About Us</h2>
+          <h2>News</h2>
+          <h2>Privacy Policy</h2>
+        </div>
+        <div class="footer-menu">
+          <h1>Information</h1>
+          <h2>Advice</h2>
+          <h2>Crime Prevention</h2>
+          <h2>Challan</h2>
+          <h2>Payment</h2>
+        </div>
+        <div class="footer-menu">
+          <h1>Partners</h1>
+          <h2>Police Sathi</h2>
+          <h2>Nepal Government</h2>
+          <h2>Herald Kathmandu</h2>
+        </div>
+      </div>
     </div>
-    <div class="footer-menu-container">
-      <div class="footer-menu">
-        <h1>Traffic Police</h1>
-            <h2>Contact Us</h2>
-            <h2>About Us</h2>
-            <h2>News</h2>
-            <h2>Privacy Policy</h2>
-      </div>
-      <div class="footer-menu">
-        <h1>Information and Services</h1>
-            <h2>Advice and Information</h2>
-            <h2>Crime Prevention</h2>
-            <h2>Challan</h2>
-            <h2>Payment</h2>
-      </div>
-      <div class="footer-menu">
-        <h1>Partners</h1>
-        <h2>Police Mero Sathi</h2>
-            <h2>Nepal Government</h2>
-            <h2>Herald College Kathmandu</h2>
-            <h2>Nepal Transport Office</h2>
-      </div>
-      </div>
-      <div class="row-copyright ">
-        <p>Copyright © 2021 E-Challan System - All right reserved</p>
-      </div>
+    <div class="row-copyright ">
+      <p>Copyright © 2021 E-Challan System - All right reserved</p>
     </div>
   </footer>
+  <!--End of Footer Section-->
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="../Userjs/user.js"></script>

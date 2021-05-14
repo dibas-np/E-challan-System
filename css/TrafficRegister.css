@@ -104,6 +104,7 @@
 
 @media screen and (max-width: 700px){ /*  Applied When screen size is smaller than 700px */
   .section-register{
+    padding-top: 50px;
     flex-direction: column; /* to keep elements as column alignment */
   }
   .main-register{
@@ -111,6 +112,19 @@
   }
   .main-login{
     padding: 20px; /* padding of 20px to all sides */
+  } 
+  .main-login p{
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  .main-register button, .main-login button{
+    font-size: 16px;
+  }
+  .main-register input, .main-register label{
+    font-size: 16px;
+  }
+  .main-register h1{
+    font-size: 24px;
   }
 }
   /* End of code */

@@ -82,9 +82,14 @@ header {
   background: #fff;
   text-align: center;
   color: #000535;
-  border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 24px;
+}
+.search-container{
+  border-radius: 5px 5px 5px 5px;
+}
+.searchButton{
+  border-radius: 0 5px 0 0;
 }
 
 .dropdown-content {
@@ -113,6 +118,12 @@ header {
   text-shadow: 1px #000535;
 }
 
+/* Adding clearfix to clear after this section */
+.site-header::after{
+  content: "";
+  clear: both;
+  display: table;
+}
 /*End of Top logo section*/
 
 /*Navigation bar Menu Secition*/
@@ -120,6 +131,7 @@ header {
   width: auto;
   height: 63px;
   background-color: white;
+  min-width: 480px;
 }
 
 ul {
@@ -382,13 +394,18 @@ p5 {
   font-weight: 540;
 }
 
+.news-section::after{
+  content: "";
+  clear: both;
+  display: table;
+
+}
 /*End of News Section*/
 
 /*Footer*/
 .footer-container {
   background-color: #030730;
-  height: 500px;
-  padding: 50px 100px 20px 100px;
+ padding: 100px 20px;
 }
 
 .footer-heading {
@@ -404,48 +421,142 @@ p5 {
   color: #fff;
 }
 
-.row-social-icons {
-  padding-right: 200px;
-  margin-top: 30px;
-  margin-bottom: 40px;
+.footer-container {
+  display: block;
 }
 
 .row-social-icons ul li a {
   color: #fff;
 }
 
-.footer-menu {
-  float: left;
-  width: 33.33%;
+.row-social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin-right: 200px;
 }
 
-/* Clear floats after the columns */
-.footer-menu-container:after {
-  content: "";
-  display: table;
-  clear: both;
+.footer-menu-container{
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
 }
-
 .footer-menu h1 {
   font-size: 30px;
-  line-height: 34px;
   padding-bottom: 20px;
 }
 
 .footer-menu h2 {
   font-size: 25px;
   font-weight: 500;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 .row-copyright {
   text-align: center;
-  height: 100px;
-  background-color: #00031e;
+  background-color: #00010a;
+  padding: 30px;
 }
 
 .row-copyright p {
-  padding-top: 40px;
+  font-size: 20px;
 }
 
 /*End of Footer*/
+/* Responsive CSS for header */
+
+@media screen and (max-width: 800px){
+  .nav-menu-section{
+    height: 50px;
+  }
+  ul{
+    right: -180px;
+  }
+  ul li a{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 680px){
+  .searchTerm{
+    visibility: hidden;
+  }
+  .searchButton{
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 580px){
+  .nav-menu-section{
+    height: 40px;
+  }
+  ul li a{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 490px){
+  .nav-menu-section{
+    height: 30px;
+  }
+  ul li{
+    padding-top: 12px;
+    margin: 3px;
+  }
+  ul li a{
+    font-size: 15px;
+    padding: 2px;
+  }
+  .searchButton{
+    visibility: hidden;
+  }
+}
+
+
+/*Responsive CSS for Footer*/
+@media screen and (max-width: 800px){
+  .footer-menu-container{
+    padding: 10px;
+  }
+  .footer-menu h1 {
+    font-size: 24px;
+  }
+  .row-social-icons {
+    margin-right: 350px;
+  }
+  .footer-menu h2 {
+    font-size: 20px;
+  }
+  .footer-heading {
+    font-size: 36px;
+  }
+  .row-social-icons i {
+    font-size: 16px;
+  }
+  .row-social-icons ul li {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .footer-menu-container{
+    flex-wrap: wrap;
+    padding: 40px;
+  }
+  .footer-heading {
+    font-size: 26px;
+  }
+  .footer-menu h1 {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .footer-container li{
+    margin-left: -90px;
+  }
+  .row-copyright {
+    margin-top: -50px;
+  }
+}
