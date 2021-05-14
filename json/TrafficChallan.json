@@ -4,8 +4,8 @@
       "fullName": "James Bahadur",
       "address": "Kathmandu",
       "licenceNo": "12345",
-      "vehicleCat": "Category B",
-      "vehicleNum": "CH 12 B 420",
+      "vehicleCat": "A",
+      "vehicleNum": "CH 12 G 420",
       "createdBy": "Jung Bahadur",
       "challanDate": "2021-09-17",
       "guilty": "Drink and Drive",
@@ -21,22 +21,6 @@
       "email": "kaji@email.np",
       "password": "pass",
       "id": 1
-    },
-    {
-      "username": "asdas",
-      "phone": "12",
-      "address": "KTM",
-      "email": "rabinsraizee@gmail.com",
-      "password": "asd",
-      "id": 2
-    },
-    {
-      "username": "dsfsdfsa",
-      "phone": "32132",
-      "address": "KTM",
-      "email": "rabidsraizee@gmail.com",
-      "password": "ads",
-      "id": 3
     }
   ]
 }
