@@ -88,7 +88,6 @@ class TrafficRegister extends TrafficUsers{
     })
   }
 
-
 //Traffic Login class
 class TrafficLogin extends TrafficUsers{
     constructor(uname, pass){
