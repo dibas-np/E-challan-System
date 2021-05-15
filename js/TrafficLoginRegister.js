@@ -58,12 +58,12 @@ class TrafficRegister extends TrafficUsers{
           }else{
             swal.fire({ //swal is SweetAlert in JavaScript
                 icon: 'success', //success icon for display message
-                title: 'Traffic Registraion Success' //title of pop-up message
+                title: 'Traffic Registration Success' //title of pop-up message
             })
             const data = this.makeTrafficData(); //get data from makeTrafficData
             axios.post('http://localhost:3000/TrafficUsers', data)
             .then(res => {
-                console.log("Regisration success");
+                console.log("Registration success");
             }).catch(e => console.log(e));
 
           }
