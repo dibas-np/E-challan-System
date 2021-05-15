@@ -16,6 +16,7 @@
           src="https://kit.fontawesome.com/9d93f40cf0.js"
           crossorigin="anonymous"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.all.min.js"></script>
     </head>
 
     <body>
@@ -84,21 +85,21 @@
                    <button type="button" class="toggle-btn" onclick="signin()">Sign In</button>
                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
                 </div>
-                <form id="signin" class="input-group">
-                    <input type="text" class="input-field" placeholder="User Name" required>
-                    <input type="text" class="input-field" placeholder="Password" required>
+                <form id="signin" class="input-group" method="GET">
+                    <input type="text" class="input-field" id="username" placeholder="User Name" required>
+                    <input type="password" class="input-field" id="passw" placeholder="Password" required>
                     <input type="checkbox" class="check-box"><span>Remember Password</span>
-                    <button type="submit" class="submit-btn">Sign In</button>
-                    <p class="message pt-4 text-danger"></p>
+                    <button type="submit" class="submit-btn" id="sub-btn">Sign In</button>
+                    
             
                 </form>
-                <form id="register" class="input-group">
-                    <input type="text" class="input-field" placeholder="Name" required>
-                    <input type="tel" class="input-field" placeholder="Phone Number" required>
-                    <input type="text" class="input-field" placeholder="User Name" required>
-                    <input type="text" class="input-field" placeholder="Password" required>
-                    <input type="text" class="input-field" placeholder="Address" required>
-                    <input type="checkbox" class="check-box"><span>I agree to the terms and condition</span>
+                <form id="register" class="input-group" method="POST">
+                    <input type="text" class="input-field" id="urname" placeholder="User Name" required>
+                    <input type="email" class="input-field" id="mail" placeholder="Email" required>
+                    <input type="tel" class="input-field" id="number" placeholder="Phone Number" required>
+                    <input type="text" class="input-field" id="add" placeholder="Address" required>
+                    <input type="password" class="input-field" id="pass" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and Condition</span>
                     <button type="submit" class="submit-btn">Register</button>
                    
                 </form>
@@ -190,10 +191,8 @@
   <!--End of Footer Section-->
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="../Userjs/user.js"></script>
-  <script src="../Userjs/signup.js"></script>
-  <script src="../Userjs/login.js"></script>
-  <script src="../Userjs/app.js"></script>
+  <script src="../js/userregister.js"></script>
+  <script src="../js/userlogin.js"></script>
  
 
     </body>

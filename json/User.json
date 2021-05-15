@@ -1,0 +1,28 @@
+{
+  "register": [
+    {
+      "uname": "Hrishave",
+      "email": "hrishave@gmail.com",
+      "phonenumber": "9867910122",
+      "address": "Panipokhari",
+      "password": "guyguygu",
+      "id": 1
+    },
+    {
+      "uname": "Rabins",
+      "email": "rabins@gmail.com",
+      "phonenumber": "9867910178",
+      "address": "Lazimpat",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "uname": "Sumit Hamal",
+      "email": "sumith@gmail.com",
+      "phonenumber": "9805456908",
+      "address": "Tokha",
+      "password": "Hamal123",
+      "id": 3
+    }
+  ]
+}

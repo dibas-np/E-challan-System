@@ -1,0 +1,94 @@
+/* Start of code */
+* {
+    margin: 0; 
+    padding: 0; 
+    font-family: "Roboto", sans-serif; 
+  }
+.main-form{
+    display: flex;
+    justify-content: center; 
+    background-color: #030730;
+    padding: 30px 20px;
+}
+.payment-detail div{
+    display: block;
+}
+
+.payment-detail h2{
+    font-size: 46px;
+    padding-top: 50px;
+    color: #DC143C;
+}
+
+.payment-detail label{
+    font-size: 20px;
+    padding-top: 20px;  
+    padding-bottom: 10px;
+    color: #fafbff; 
+    display: block;
+}
+
+.payment-detail input, .payment-detail select {
+    padding: 10px 20px;
+    font-size: 20px;
+   border-radius: 10px;
+    width: 100%;
+}
+
+.butons{
+    display: flex;
+    justify-content: center; 
+}
+.main-form button, .butons p {
+    background-color: red;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 20px;
+    font-weight: 555;
+    text-align: center; 
+    cursor: pointer;
+    border: none; 
+    margin-right: 20px;
+}
+
+#payment{
+    background-color: red;
+}
+
+#payment:hover{
+    color: white;
+    background-color: #88001b;
+}
+
+#printpayment:hover{
+    color: white;
+    background-color: #88001b;
+}
+
+
+/* When screen size gets below 600px */
+@media screen and (max-width: 600px) { 
+    .payment-detail h2{
+        font-size: 36px; 
+        color: #DC143C;
+    }
+    
+    .payment-detail p{
+        font-size: 16px; 
+    }
+    
+    .payment-detail label{
+        font-size: 20px; 
+    }
+    
+    .payment-detail input, .payment-detail select {
+        font-size: 16px; 
+        width: 80%; 
+    }
+    
+    .main-form button {
+        font-size: 18px;
+    }
+}
