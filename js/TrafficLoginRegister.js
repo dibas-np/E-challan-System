@@ -28,7 +28,7 @@ class TrafficUsers{
     }
 }
 
-//class for Refistration
+//class for Registration
 class TrafficRegister extends TrafficUsers{
   // constructor 
   constructor(uname, phone, address, email, pass){
@@ -37,7 +37,6 @@ class TrafficRegister extends TrafficUsers{
     this.add = address;
     this.emails = email;
   }
-  
     //method to register to challan
     trafficRegister(){
       // get value from TrafficUsers json server through locolhost 3000
@@ -59,12 +58,12 @@ class TrafficRegister extends TrafficUsers{
           }else{
             swal.fire({ //swal is SweetAlert in JavaScript
                 icon: 'success', //success icon for display message
-                title: 'Traffic Registraion Success' //title of pop-up message
+                title: 'Traffic Registration Success' //title of pop-up message
             })
             const data = this.makeTrafficData(); //get data from makeTrafficData
             axios.post('http://localhost:3000/TrafficUsers', data)
             .then(res => {
-                console.log("Regisration success");
+                console.log("Registration success");
             }).catch(e => console.log(e));
 
           }
@@ -88,7 +87,6 @@ class TrafficRegister extends TrafficUsers{
       trafficRegister.trafficRegister();
     })
   }
-
 
 //Traffic Login class
 class TrafficLogin extends TrafficUsers{

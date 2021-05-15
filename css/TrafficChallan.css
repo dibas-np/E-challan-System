@@ -10,53 +10,50 @@
     background-color: #030730;
     padding: 30px 20px;
 }
-.challan-detail div{
-    display: block;
-}
 
+.challan-detail div{
+    display: block;  /* keep elements in the block format */
+}
 .challan-detail h2{
-    font-size: 46px;
-    padding-top: 50px;
+    font-size: 46px; /* give font size */
+    padding-top: 50px; /* give padding top only */
     color: #DC143C;
 }
-
 .challan-detail p{
-    font-size: 18px;
+    font-size: 18px;  /* give font size */
     color: #fafbff;
-    font-weight: 300;
-    padding: 20px 0;
-    opacity: 80%;
+    font-weight: 300;  
+    padding: 20px 0;  /* padding */
+    opacity: 80%;  /* overall opacity of paragraph */
 }
 
 .challan-detail label{
-    font-size: 20px;
+    font-size: 20px;  /* give font size */
     padding-top: 20px;  
-    padding-bottom: 10px;
+    padding-bottom: 10px; /* padding bottom only */
     color: #fafbff; 
     display: block;
 }
-
 .challan-detail input, .challan-detail select {
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 20px;  /* give font size */
    border-radius: 10px;
-    width: 100%;
+    width: 100%; /* takes full width */
 }
-
 .buttonss{
-    display: flex;
+    display: flex; /* use opf flex property */
     justify-content: center; /* bring all content center */
 }
 .main-form button, .buttonss p {
     background-color: #f3f2f2;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 20px;  /* give font size */
     border-radius: 10px;
-    width: 50%;
+    width: 50%; /* give only 50% of width to buttons  */
     margin-top: 20px;
     font-weight: 555;
     text-align: center; /* bring all text center */
-    cursor: pointer;
+    cursor: pointer; 
     border: none; /* border removing */
     margin-right: 20px;
 }
@@ -64,34 +61,28 @@
 #submitChallan{
     background-color: #DC143C;
 }
-
 #submitChallan:hover{
-    background-color: #88001b;
+    background-color: #88001b; /* background color on mouse hover */
 }
 .main-form p:hover{
     background-color: #c5c5c5;
 }
-
 /* When screen size gets below 600px */
 @media screen and (max-width: 600px) { 
     .challan-detail h2{
         font-size: 36px; /* decrease font size */
         color: #DC143C;
     }
-    
     .challan-detail p{
         font-size: 16px; /* decrease font size */
     }
-    
     .challan-detail label{
         font-size: 20px; /* decrease font size */
     }
-    
     .challan-detail input, .challan-detail select {
         font-size: 16px; /* decrease font size */
         width: 80%; /* decrease width */
     }
-    
     .main-form button {
         font-size: 18px; /* decrease font size */
     }

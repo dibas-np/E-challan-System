@@ -7,7 +7,7 @@
       "vehicleCat": "A",
       "vehicleNum": "CH 12 G 420",
       "createdBy": "Jung Bahadur",
-      "challanDate": "2021-09-17",
+      "challanDate": "2021-05-14",
       "guilty": "Drink and Drive",
       "fineAmount": "1000",
       "id": 1
@@ -21,6 +21,30 @@
       "email": "kaji@email.np",
       "password": "pass",
       "id": 1
+    },
+    {
+      "username": "newuser",
+      "phone": "888883210",
+      "address": "KTM, Nepal",
+      "email": "new@uesr.test",
+      "password": "qwert",
+      "id": 2
+    },
+    {
+      "username": "newuserw",
+      "phone": "121",
+      "address": "KTM",
+      "email": "rabinsraidfsfsszee@gmail.com",
+      "password": "afdaasdf",
+      "id": 3
+    },
+    {
+      "username": "fsd",
+      "phone": "312",
+      "address": "sfd",
+      "email": "rabinsraizece@gmail.com",
+      "password": "c",
+      "id": 4
     }
   ]
 }
