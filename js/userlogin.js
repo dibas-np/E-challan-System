@@ -35,8 +35,8 @@ class Signin {
         }else{
           swal.fire({ 
               icon: 'error', 
-              title: 'Login Failed', 
-              text: 'Username or Password did not Match! Please try again with correct Username and Password.'
+              title: 'Signup Failed', 
+              text: ' Incorrect username or password. Try again!'
             })
         }
     }).catch (e => console.log(e));
