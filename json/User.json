@@ -23,14 +23,6 @@
       "address": "Tokha",
       "password": "Hamal123",
       "id": 3
-    },
-    {
-      "uname": "admin",
-      "email": "abc@fmm.cl",
-      "phonenumber": "aa",
-      "address": "aa",
-      "password": "aa",
-      "id": 4
     }
   ]
 }
