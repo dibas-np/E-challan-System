@@ -29,22 +29,6 @@
       "email": "new@uesr.test",
       "password": "qwert",
       "id": 2
-    },
-    {
-      "username": "newuserw",
-      "phone": "121",
-      "address": "KTM",
-      "email": "rabinsraidfsfsszee@gmail.com",
-      "password": "afdaasdf",
-      "id": 3
-    },
-    {
-      "username": "fsd",
-      "phone": "312",
-      "address": "sfd",
-      "email": "rabinsraizece@gmail.com",
-      "password": "c",
-      "id": 4
     }
   ]
 }
