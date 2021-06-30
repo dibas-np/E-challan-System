@@ -25,7 +25,6 @@ E-challan-System is the online challan management system where there are three u
 * [@Hrishave](https://github.com/Hrishave)
 * [@Raj-Ale](https://github.com/Raj-Ale)
 
-* @dibas-np
 ## Contributing
 This project doesn't require any pull requests. Feel free to fork this project and work on it.
 
