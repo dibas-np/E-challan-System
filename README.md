@@ -1,3 +1,5 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
 # E-challan-System
 ## E-challan-System is the online challan management system where there are three users: Admin, Traffic and Users.
 ### Admin - can create, read, update, delete challan
