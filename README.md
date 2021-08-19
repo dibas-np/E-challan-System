@@ -20,10 +20,10 @@ E-challan-System is the online challan management system where there are three u
 
 ## Authors
 
-* [@dibas-np](https://github.com/dibas-np) (Lead)
-* [@Rabinsraizeee](https://github.com/Rabinsraizeee)
-* [@Hrishave](https://github.com/Hrishave)
-* [@Raj-Ale](https://github.com/Raj-Ale)
+* [@dibas-np](https://github.com/dibas-np) (Lead Developer)
+* [@rabinsraizeee](https://github.com/Rabinsraizeee) (UI/UX Designer and Developer)
+* [@Hrishave](https://github.com/Hrishave) (Developer)
+* [@Raj-Ale](https://github.com/Raj-Ale) (Developer)
 
 ## Contributing
 This project doesn't require any pull requests. Feel free to fork this project and work on it.
